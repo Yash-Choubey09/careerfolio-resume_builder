@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<!-- STITCH_THREEJS_START:ANIMATION_2 class="fixed inset-0 w-full h-full bg-transparent" -->
+<div class="fixed inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_2" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_2');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // Three.js interactive 3D scene: Floating sassy kinetic 3D resume cards, bouncy dimensional geometric badges, Java coffee bean gem, and reactive neon cubes that track mouse hover
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+camera.position.set(0, 0, 18);
+
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+container.appendChild(renderer.domElement);
+
+// Lighting
+const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
+scene.add(ambientLight);
+
+const bluePointLight = new THREE.PointLight(0x0022ff, 4, 30);
+bluePointLight.position.set(10, 10, 10);
+scene.add(bluePointLight);
+
+const yellowPointLight = new THREE.PointLight(0xccff00, 3, 30);
+yellowPointLight.position.set(-10, -10, 8);
+scene.add(yellowPointLight);
+
+// Group to hold all 3D floating interactive assets
+const rootGroup = new THREE.Group();
+scene.add(rootGroup);
+
+// Main Floating 3D Resume Slab
+const slabGeo = new THREE.BoxGeometry(6.5, 9, 0.4);
+const slabMat = new THREE.MeshPhongMaterial({
+  color: 0x0a1445,
+  specular: 0xccff00,
+  shininess: 90,
+  wireframe: false
+});
+const resumeSlab = new THREE.Mesh(slabGeo, slabMat);
+rootGroup.add(resumeSlab);
+
+// Edge rim wireframe accent for the slab
+const edgeGeo = new THREE.EdgesGeometry(slabGeo);
+const edgeMat = new THREE.LineBasicMaterial({ color: 0xccff00, linewidth: 2 });
+const slabWire = new THREE.LineSegments(edgeGeo, edgeMat);
+resumeSlab.add(slabWire);
+
+// Add mini layered badges inside the resume slab
+const badgeGeo = new THREE.BoxGeometry(4.8, 1.2, 0.2);
+const badgeMat1 = new THREE.MeshPhongMaterial({ color: 0x0022ff, emissive: 0x001188 });
+const badge1 = new THREE.Mesh(badgeGeo, badgeMat1);
+badge1.position.set(0, 2.5, 0.3);
+resumeSlab.add(badge1);
+
+const barGeo1 = new THREE.BoxGeometry(4.8, 0.4, 0.15);
+const barMat1 = new THREE.MeshPhongMaterial({ color: 0xccff00 });
+const bar1 = new THREE.Mesh(barGeo1, barMat1);
+bar1.position.set(0, 0.8, 0.3);
+resumeSlab.add(bar1);
+
+const barGeo2 = new THREE.BoxGeometry(3.6, 0.4, 0.15);
+const bar2 = new THREE.Mesh(barGeo2, barMat1);
+bar2.position.set(-0.6, -0.2, 0.3);
+resumeSlab.add(bar2);
+
+const barGeo3 = new THREE.BoxGeometry(4.8, 1.8, 0.2);
+const barMat3 = new THREE.MeshPhongMaterial({ color: 0x1f2b60 });
+const bar3 = new THREE.Mesh(barGeo3, barMat3);
+bar3.position.set(0, -2.2, 0.3);
+resumeSlab.add(bar3);
+
+// Floating Surrounding Geometric Badges (Java / Servlets / XML tokens)
+const tokens = [];
+
+// Token 1: Neon Octahedron (Java runtime core)
+const octGeo = new THREE.OctahedronGeometry(1.6);
+const octMat = new THREE.MeshPhongMaterial({
+  color: 0xccff00,
+  wireframe: false,
+  shininess: 100
+});
+const octMesh = new THREE.Mesh(octGeo, octMat);
+octMesh.position.set(-6.5, 3.2, 3);
+rootGroup.add(octMesh);
+tokens.push({ mesh: octMesh, rotX: 0.02, rotY: 0.025, floatSpeed: 1.8, floatOffset: 0 });
+
+// Token 2: Electric Blue Torus (Servlet Dispatcher Ring)
+const torusGeo = new THREE.TorusGeometry(1.8, 0.4, 16, 32);
+const torusMat = new THREE.MeshPhongMaterial({
+  color: 0x0022ff,
+  shininess: 80
+});
+const torusMesh = new THREE.Mesh(torusGeo, torusMat);
+torusMesh.position.set(6.8, -2.4, 2);
+rootGroup.add(torusMesh);
+tokens.push({ mesh: torusMesh, rotX: 0.015, rotY: -0.02, floatSpeed: 2.2, floatOffset: 2 });
+
+// Token 3: Golden/Neon Icosahedron (XML Engine Dodeca)
+const icoGeo = new THREE.IcosahedronGeometry(1.2);
+const icoMat = new THREE.MeshStandardMaterial({
+  color: 0xf5ff3d,
+  roughness: 0.2,
+  metalness: 0.3
+});
+const icoMesh = new THREE.Mesh(icoGeo, icoMat);
+icoMesh.position.set(5.8, 4.2, -1);
+rootGroup.add(icoMesh);
+tokens.push({ mesh: icoMesh, rotX: -0.01, rotY: 0.03, floatSpeed: 1.5, floatOffset: 4 });
+
+// Token 4: Chunky Neo-Brutalist Floating Cube
+const cubeGeo = new THREE.BoxGeometry(1.4, 1.4, 1.4);
+const cubeMat = new THREE.MeshPhongMaterial({ color: 0x00f0ff });
+const cubeMesh = new THREE.Mesh(cubeGeo, cubeMat);
+cubeMesh.position.set(-5.5, -4.0, 1.5);
+rootGroup.add(cubeMesh);
+tokens.push({ mesh: cubeMesh, rotX: 0.03, rotY: 0.01, floatSpeed: 2.0, floatOffset: 1 });
+
+// Mouse Interaction
+let mouseX = 0;
+let mouseY = 0;
+let targetX = 0;
+let targetY = 0;
+
+window.addEventListener('mousemove', (e) => {
+  const normX = (e.clientX / window.innerWidth) * 2 - 1;
+  const normY = -(e.clientY / window.innerHeight) * 2 + 1;
+  targetX = normX * 0.4;
+  targetY = normY * 0.3;
+});
+
+// Window Resize Handler
+window.addEventListener('resize', () => {
+  const w = container.clientWidth || window.innerWidth;
+  const h = container.clientHeight || window.innerHeight;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+});
+
+// Render Loop
+let clock = new THREE.Clock();
+
+function animate() {
+  requestAnimationFrame(animate);
+  const elapsedTime = clock.getElapsedTime();
+
+  // Smooth mouse follow
+  mouseX += (targetX - mouseX) * 0.05;
+  mouseY += (targetY - mouseY) * 0.05;
+
+  // Animate main resume slab
+  resumeSlab.rotation.y = Math.sin(elapsedTime * 0.8) * 0.25 + mouseX;
+  resumeSlab.rotation.x = Math.cos(elapsedTime * 0.6) * 0.15 - mouseY;
+  resumeSlab.position.y = Math.sin(elapsedTime * 1.2) * 0.4;
+
+  // Animate orbit/floating tokens
+  tokens.forEach((t) => {
+    t.mesh.rotation.x += t.rotX;
+    t.mesh.rotation.y += t.rotY;
+    t.mesh.position.y += Math.sin(elapsedTime * t.floatSpeed + t.floatOffset) * 0.015;
+  });
+
+  renderer.render(scene, camera);
+}
+
+animate();
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_2 -->
+</body>
+</html>

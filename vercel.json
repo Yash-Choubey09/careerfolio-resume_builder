@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/builder.jsp",
+      "destination": "/builder.html"
+    },
+    {
+      "source": "/index.jsp",
+      "destination": "/index.html"
+    }
+  ]
+}

@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"error-container":"#ffdad6","surface-container-high":"#eae7ea","inverse-primary":"#bdc2ff","secondary-container":"#c1f100","secondary":"#506600","primary-fixed-dim":"#bdc2ff","on-primary":"#ffffff","error":"#ba1a1a","surface-container-lowest":"#ffffff","outline-variant":"#c5c5db","on-primary-fixed-variant":"#001de0","on-surface":"#1c1b1e","surface-dim":"#dcd9dc","surface":"#fcf8fb","surface-bright":"#fcf8fb","on-error":"#ffffff","tertiary":"#56009b","on-tertiary":"#ffffff","on-secondary-container":"#546b00","secondary-fixed":"#c3f400","on-secondary-fixed":"#161e00","on-secondary":"#ffffff","primary":"#0017be","outline":"#757589","inverse-surface":"#313032","secondary-fixed-dim":"#abd600","on-primary-container":"#bbc1ff","on-tertiary-fixed":"#2b0052","on-secondary-fixed-variant":"#3c4d00","primary-fixed":"#dfe0ff","background":"#fcf8fb","tertiary-container":"#721dc3","on-tertiary-container":"#dab7ff","tertiary-fixed":"#efdbff","inverse-on-surface":"#f3f0f3","primary-container":"#0022ff","on-primary-fixed":"#000766","surface-tint":"#2b3fff","surface-variant":"#e5e1e4","on-surface-variant":"#444557","tertiary-fixed-dim":"#dbb8ff","surface-container-low":"#f6f2f6","on-tertiary-fixed-variant":"#6600b7","surface-container-highest":"#e5e1e4","surface-container":"#f0edf0","on-background":"#1c1b1e","on-error-container":"#93000a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2.5rem","gutter":"1.5rem","space-xs":"0.25rem","space-md":"1rem","space-lg":"1.5rem","space-sm":"0.5rem","space-2xl":"4rem","margin-mobile":"1.25rem","margin":"2.5rem","gutter-mobile":"1rem"},"fontFamily":{"headline-lg":["Syne"],"headline-md":["Syne"],"display-xl":["Syne"],"body-lg":["Space Grotesk"],"body-md":["Space Grotesk"],"label-sm":["JetBrains Mono"],"display-xl-mobile":["Syne"],"label-lg":["JetBrains Mono"],"headline-sm":["Syne"],"body-sm":["Space Grotesk"],"headline-lg-mobile":["Syne"],"label-md":["JetBrains Mono"]},"fontSize":{"headline-lg":["36px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"700"}],"display-xl":["56px",{"lineHeight":"60px","letterSpacing":"-0.03em","fontWeight":"800"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"display-xl-mobile":["36px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.05em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"26px","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b-2 border-on-surface"><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="ResuSass Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBRIqOf-Vq3h2xM1NfbcDB0Ua8x_Bh25QRDoSq6IBDgGhu88bO69DoVhrn9NczNRVpJ4KwvplN8d2WLNBECBV6TKowkbA9cDfYu0t7tNE5wln-Ho3R0vc942IaO-lP5qvMfN00KQM-RZaguNdKd4BnWUClf97WbZkyrgJeQiqmVt3zqAcRi7brXKqY0_JGi-cBWM6ZmyU50qpcgfXxNuj055R6tueZu0uzjJsnmO_56kw"/><span class="font-headline-md text-headline-md tracking-tight uppercase text-on-surface">RESUSASS</span><div class="hidden xl:flex items-center gap-space-xs ml-space-sm"><span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-space-sm py-1 border border-on-surface uppercase font-bold tracking-wider">JRE 21 Verified</span><span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-space-sm py-1 border border-on-surface uppercase font-bold tracking-wider">100% Non-AI Human Craft</span></div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-bold shadow-[2px_2px_0px_#1c1b1e]"><a class="font-label-md text-label-md uppercase px-space-sm py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="resume-studio-builder" href="#">Resume Studio (Builder)</a><a class="font-label-md text-label-md uppercase px-space-sm py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="java-servlet-engine" href="#">Java Servlet Engine</a><a class="font-label-md text-label-md uppercase px-space-sm py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="xml-schema-editor" href="#">XML Schema Editor</a><a aria-current="page" class="uppercase px-space-sm py-2 transition-all bg-primary-container text-on-primary font-bold shadow-[2px_2px_0px_#1c1b1e]" data-path="jsp-preview-deck" href="#">JSP Preview Deck</a><a class="font-label-md text-label-md uppercase px-space-sm py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="career-vault" href="#">Career Vault</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden sm:flex flex-col text-right"><span class="font-label-sm text-label-sm uppercase text-outline">STATUS: DISPATCHED</span><span class="font-label-md text-label-md font-bold text-primary">ROOT_OPERATOR</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-on-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0RX20TIFjZRZUgTia1uDxOeP6GIGkyDD0x7J3lwNpb92Sjh29bdUH7epTg4EuOuVXV7Ff2N_DkwtmygfzvNeP0r5y8QFpYpbrK_dRKf_547TWnESTK3unrKEKnwAgTK8AsJAiGCVdsj5Ddmw_kvfIujD4dkWUX9bmwPgajQv7XBrg7gtd5t10srxv0xUtyrDoR2oitTuoTLkavDklEOkWOPPEUKmmzsZMceMC0zW7"/></div></div></header><aside class="fixed left-0 top-20 bottom-0 w-64 bg-surface-container-low border-r-2 border-on-surface z-40 hidden md:flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-sm px-space-sm"><div class="px-space-sm py-space-xs bg-surface-container-highest border border-on-surface mb-space-sm"><span class="font-label-sm text-label-sm uppercase text-outline block">SUBSYSTEM NAV</span><span class="font-label-md text-label-md font-bold text-on-surface">Tomcat 10.1 Rack</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-bold shadow-[2px_2px_0px_#1c1b1e]"><a class="flex items-center gap-space-sm px-space-sm py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md uppercase" data-path="resume-studio-builder" href="#"><span class="material-symbols-outlined text-lg">terminal</span>Builder Engine</a><a class="flex items-center gap-space-sm px-space-sm py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md uppercase" data-path="java-servlet-engine" href="#"><span class="material-symbols-outlined text-lg">memory</span>Servlet Core</a><a class="flex items-center gap-space-sm px-space-sm py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md uppercase" data-path="xml-schema-editor" href="#"><span class="material-symbols-outlined text-lg">code</span>XML Parser</a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 transition-all uppercase bg-primary-container text-on-primary font-bold shadow-[2px_2px_0px_#1c1b1e]" data-path="jsp-preview-deck" href="#"><span class="material-symbols-outlined text-lg">layers</span>JSP Deck</a><a class="flex items-center gap-space-sm px-space-sm py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md uppercase" data-path="career-vault" href="#"><span class="material-symbols-outlined text-lg">inventory_2</span>Vault Repos</a></nav></div><div class="px-space-md flex flex-col gap-space-xs"><div class="p-space-sm bg-secondary-fixed border border-on-surface"><span class="font-label-sm text-label-sm font-bold text-on-secondary-fixed block uppercase">JVM HEAP ALLOC</span><div class="w-full bg-surface-container-lowest h-2 mt-1 border border-on-surface"><div class="bg-primary h-full w-2/3"></div></div></div></div></aside><div class="md:pl-64"><main class="w-full pt-20 bg-surface min-h-[calc(100vh-140px)]"><div class="flex flex-col w-full">
+<div class="p-gutter flex flex-col gap-space-lg">
+<!-- Top Bar / Page Context Header -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-space-sm py-0.5 rounded shadow-sm tracking-wider uppercase font-bold">
+            JSP ENGINE 3.1
+          </span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-space-sm py-0.5 rounded shadow-sm tracking-wider uppercase font-bold">
+            JSTL 1.2 CORE
+          </span>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-space-sm py-0.5 rounded tracking-wider uppercase font-mono">
+            SERVLET-MAPPING: /preview/deck.action
+          </span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">
+          JSP Preview Deck &amp; Dynamic Template Engine
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+          Evaluate JavaServer Pages in real time via Apache Tomcat Jasper. Inspect Expression Language (EL) runtime scopes (<span class="font-mono text-primary font-bold">${candidate.*}</span>), compile JSTL iterators, and hot-swap reactive stylesheet themes.
+        </p>
+</div>
+<!-- Quick Session Telemetry -->
+<div class="flex items-center gap-space-sm shrink-0 self-start xl:self-auto">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shadow-sm">
+<span class="material-symbols-outlined text-xl">speed</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Bytecode Gen</span>
+<span class="font-label-lg text-label-lg text-on-surface font-mono font-bold">14.2ms [Warm]</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-xl">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">EL Scopes</span>
+<span class="font-label-lg text-label-lg text-primary font-mono font-bold">18 Evaluated</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 1: Template Gallery Selector -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">style</span>
+<span class="font-label-md text-label-md text-on-surface uppercase font-bold tracking-wider">
+            Template Gallery Selection
+          </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">(Hot-Swaps CSS Beans &amp; Custom Tags)</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-mono tracking-widest hidden sm:inline-block">
+          STATUS: ACTIVE-OVERLAY — [CYBER_COBALT_v3.0]
+        </span>
+</div>
+<!-- 4 Sassy Theme Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: Cyber Cobalt (Active) -->
+<button class="theme-card text-left bg-surface-container-lowest rounded-xl p-space-md shadow-md transition-all duration-200 hover:-translate-y-1 relative group focus:outline-none ring-2 ring-primary" onclick="selectTheme('cyber-cobalt', this)" type="button">
+<div class="absolute top-3 right-3 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold px-space-xs py-0.5 rounded shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-on-secondary-fixed animate-ping"></span>
+            ACTIVE
+          </div>
+<div class="h-24 w-full bg-primary rounded-lg p-space-sm flex flex-col justify-between mb-space-sm overflow-hidden relative shadow-inner">
+<div class="flex gap-1.5 items-center">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-lowest/40"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-lowest/40"></span>
+<span class="font-label-sm text-label-sm text-primary-fixed ml-auto font-mono">01 // COBALT</span>
+</div>
+<div class="flex flex-col">
+<div class="w-3/4 h-2 bg-secondary-fixed rounded mb-1"></div>
+<div class="w-1/2 h-1.5 bg-surface-container-lowest/70 rounded"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Cyber Cobalt</span>
+<span class="font-label-sm text-label-sm text-primary font-mono font-bold">JSP-301</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Neo-brutalist electric blue canvas with high-impact acid accents. Built for uncompromising lead architects.
+            </span>
+</div>
+</button>
+<!-- Card 2: Neon Executive -->
+<button class="theme-card text-left bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md relative group focus:outline-none" onclick="selectTheme('neon-executive', this)" type="button">
+<div class="h-24 w-full bg-secondary-fixed rounded-lg p-space-sm flex flex-col justify-between mb-space-sm overflow-hidden relative shadow-inner">
+<div class="flex gap-1.5 items-center">
+<span class="w-2.5 h-2.5 rounded-full bg-on-secondary-fixed"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-on-secondary-fixed/40"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-on-secondary-fixed/40"></span>
+<span class="font-label-sm text-label-sm text-on-secondary-fixed font-mono ml-auto">02 // VOLT</span>
+</div>
+<div class="flex flex-col">
+<div class="w-2/3 h-2 bg-inverse-surface rounded mb-1"></div>
+<div class="w-1/3 h-1.5 bg-inverse-surface/60 rounded"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Neon Executive</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono font-bold">JSP-302</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Aggressive high-contrast lime highlights on charcoal. Demands immediate recruiter retina engagement.
+            </span>
+</div>
+</button>
+<!-- Card 3: Monochrome Hacker -->
+<button class="theme-card text-left bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md relative group focus:outline-none" onclick="selectTheme('monochrome-hacker', this)" type="button">
+<div class="h-24 w-full bg-inverse-surface rounded-lg p-space-sm flex flex-col justify-between mb-space-sm overflow-hidden relative shadow-inner">
+<div class="flex gap-1.5 items-center">
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-lowest"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-lowest/30"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-surface-container-lowest/30"></span>
+<span class="font-label-sm text-label-sm text-surface-container-lowest/60 font-mono ml-auto">03 // TTY</span>
+</div>
+<div class="flex flex-col font-mono text-label-sm text-surface-container-lowest/80">
+<span class="truncate">$ cat /etc/profile &gt; stdout</span>
+<span class="w-1/2 h-1.5 bg-surface-container-lowest rounded mt-1"></span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Monochrome Hacker</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono font-bold">JSP-303</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Raw stark jet-black and sterile white. Zero fluff, maximum dense ASCII grid discipline for system kernels.
+            </span>
+</div>
+</button>
+<!-- Card 4: Minimal Editorial -->
+<button class="theme-card text-left bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md relative group focus:outline-none" onclick="selectTheme('minimal-editorial', this)" type="button">
+<div class="h-24 w-full bg-surface-container-high rounded-lg p-space-sm flex flex-col justify-between mb-space-sm overflow-hidden relative shadow-inner">
+<div class="flex gap-1.5 items-center">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-on-surface/20"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-on-surface/20"></span>
+<span class="font-label-sm text-label-sm text-tertiary font-mono ml-auto">04 // GAZETTE</span>
+</div>
+<div class="flex flex-col">
+<div class="w-4/5 h-2 bg-on-surface rounded mb-1"></div>
+<div class="w-2/3 h-1.5 bg-outline rounded"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Minimal Editorial</span>
+<span class="font-label-sm text-label-sm text-tertiary font-mono font-bold">JSP-304</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Bespoke serif typographic hierarchy, crisp asymmetrical editorial columns with disciplined whitespace.
+            </span>
+</div>
+</button>
+</div>
+</div>
+<!-- Section 2: JSP Compilation & JSTL Debugger Bar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col lg:flex-row items-center justify-between gap-space-md">
+<!-- Compilation Diagnostics -->
+<div class="flex items-center gap-space-md w-full lg:w-auto">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-2xl">check_circle</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface">Tomcat Jasper JSP Compiler</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-space-xs py-0.5 rounded font-mono font-bold">
+              STATUS: 0 ERRORS
+            </span>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-space-xs py-0.5 rounded font-mono">
+              EL 3.0 OK
+            </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            Target Servlet: <span class="font-mono text-primary font-bold">org.apache.jsp.resume_005ftemplate_jsp</span> • Scanned in 18ms • Clean bytecode emitted
+          </span>
+</div>
+</div>
+<!-- Action Toolbar -->
+<div class="flex items-center flex-wrap gap-space-xs w-full lg:w-auto justify-end">
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md uppercase px-space-sm py-2 rounded-lg transition-all shadow-sm flex items-center gap-1.5 font-bold" id="btn-print-layout" onclick="togglePrintLayout()" type="button">
+<span class="material-symbols-outlined text-base">aspect_ratio</span>
+<span id="label-print-toggle">Print Layout</span>
+</button>
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md uppercase px-space-sm py-2 rounded-lg transition-all shadow-sm flex items-center gap-1.5 font-bold" onclick="injectMockData()" type="button">
+<span class="material-symbols-outlined text-base">data_object</span>
+<span>Inject Mock</span>
+</button>
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md uppercase px-space-sm py-2 rounded-lg transition-all shadow-sm flex items-center gap-1.5 font-bold" onclick="exportHtmlBundle()" type="button">
+<span class="material-symbols-outlined text-base">folder_zip</span>
+<span>Export Bundle</span>
+</button>
+<button class="bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md uppercase px-space-md py-2 rounded-lg transition-all shadow-md flex items-center gap-1.5 font-bold" onclick="simulatePdfPrint()" type="button">
+<span class="material-symbols-outlined text-base">print</span>
+<span>PDF Print Sim</span>
+</button>
+</div>
+</div>
+<!-- Section 3: Central Workspace (Split View JSP vs Live Render) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT PANE: JSP Template Source (5 cols desktop) -->
+<div class="xl:col-span-5 flex flex-col bg-surface-container-lowest rounded-xl shadow-md overflow-hidden">
+<!-- Source Header Bar -->
+<div class="bg-surface-container-highest px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-lg">code</span>
+<span class="font-label-md text-label-md font-mono font-bold text-on-surface">resume_template.jsp</span>
+<span class="bg-surface-container-lowest text-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded font-mono">
+              UTF-8
+            </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant transition-colors" onclick="copyJspSnippet()" title="Copy JSP Source" type="button">
+<span class="material-symbols-outlined text-base">content_copy</span>
+</button>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed"></span>
+</div>
+</div>
+<!-- Syntax Tag Bar -->
+<div class="bg-surface-container-high px-space-md py-1 flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant overflow-x-auto">
+<span class="text-tertiary font-bold uppercase">&lt;%@ Directives %&gt;</span>
+<span>•</span>
+<span class="text-primary font-bold uppercase">&lt;c:forEach&gt;</span>
+<span>•</span>
+<span class="text-secondary font-bold uppercase">${EL_Expression}</span>
+<span class="ml-auto font-mono text-outline">Ln 44, Col 1</span>
+</div>
+<!-- JSP Code Content Area -->
+<div class="p-space-md bg-inverse-surface text-surface-container-lowest font-mono text-label-sm overflow-x-auto leading-relaxed select-text space-y-1">
+<div class="text-surface-container-lowest/40 font-bold">&lt;%-- ======================================================== --%&gt;</div>
+<div class="text-surface-container-lowest/40 font-bold">&lt;%-- RESUSASS DYNAMIC JSP ENGINE V3.1 --%&gt;</div>
+<div class="text-surface-container-lowest/40 font-bold">&lt;%-- ======================================================== --%&gt;</div>
+<div class="text-secondary-fixed-dim pt-2">
+            &lt;%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%&gt;
+          </div>
+<div class="text-secondary-fixed-dim">
+            &lt;%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %&gt;
+          </div>
+<div class="text-secondary-fixed-dim">
+            &lt;%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %&gt;
+          </div>
+<div class="text-surface-container-lowest/40 pt-2">&lt;%-- JSP Bean Declaration &amp; Scopes --%&gt;</div>
+<div class="text-surface-container-lowest">
+            &lt;jsp:useBean id="candidate" class="com.resusass.model.CandidateBean" scope="request" /&gt;
+          </div>
+<div class="pt-2 text-surface-container-lowest/80">&lt;div class="resume-wrapper <span class="text-secondary-fixed">${theme.wrapperClass}</span>"&gt;</div>
+<!-- Header EL -->
+<div class="pl-4">
+<span class="text-surface-container-lowest/40">&lt;!-- Candidate Dossier Header --&gt;</span>
+</div>
+<div class="pl-4 text-surface-container-lowest">
+            &lt;header class="hero-block"&gt;
+          </div>
+<div class="pl-8 text-surface-container-lowest">
+            &lt;h1 class="fullname"&gt;<span class="text-secondary-fixed font-bold">${candidate.fullName}</span>&lt;/h1&gt;
+          </div>
+<div class="pl-8 text-surface-container-lowest">
+            &lt;p class="headline-role"&gt;<span class="text-secondary-fixed">${candidate.roleTitle}</span> &amp;bull; <span class="text-secondary-fixed">${candidate.location}</span>&lt;/p&gt;
+          </div>
+<div class="pl-8 text-surface-container-lowest">
+            &lt;span class="badge"&gt;<span class="text-secondary-fixed">${candidate.clearanceLevel}</span>&lt;/span&gt;
+          </div>
+<div class="pl-4 text-surface-container-lowest">&lt;/header&gt;</div>
+<!-- Experience JSTL loop -->
+<div class="pl-4 pt-2">
+<span class="text-surface-container-lowest/40">&lt;!-- Dynamic Experience Rendering via JSTL Core --&gt;</span>
+</div>
+<div class="pl-4 text-tertiary-fixed-dim">
+            &lt;c:forEach items="<span class="text-secondary-fixed">${candidate.experienceList}</span>" var="job" varStatus="loop"&gt;
+          </div>
+<div class="pl-8 text-surface-container-lowest">
+            &lt;section class="job-card" id="exp-<span class="text-secondary-fixed">${loop.index}</span>"&gt;
+          </div>
+<div class="pl-12 text-surface-container-lowest">
+            &lt;div class="job-header"&gt;
+          </div>
+<div class="pl-16 text-surface-container-lowest">
+            &lt;h3&gt;<span class="text-secondary-fixed font-bold">${job.title}</span>&lt;/h3&gt;
+          </div>
+<div class="pl-16 text-surface-container-lowest">
+            &lt;span class="company"&gt;@<span class="text-secondary-fixed">${job.company}</span>&lt;/span&gt;
+          </div>
+<div class="pl-16 text-surface-container-lowest">
+            &lt;span class="period"&gt;<span class="text-secondary-fixed">${job.period}</span>&lt;/span&gt;
+          </div>
+<div class="pl-12 text-surface-container-lowest">&lt;/div&gt;</div>
+<div class="pl-12 text-surface-container-lowest">
+            &lt;p class="summary"&gt;<span class="text-secondary-fixed">${job.description}</span>&lt;/p&gt;
+          </div>
+<!-- Nested skills chips JSTL -->
+<div class="pl-12 text-tertiary-fixed-dim">
+            &lt;c:forEach items="<span class="text-secondary-fixed">${job.techStack}</span>" var="tech"&gt;
+          </div>
+<div class="pl-16 text-surface-container-lowest">
+            &lt;span class="tech-chip"&gt;&amp;lt;<span class="text-secondary-fixed">${tech}</span>/&amp;gt;&lt;/span&gt;
+          </div>
+<div class="pl-12 text-tertiary-fixed-dim">&lt;/c:forEach&gt;</div>
+<div class="pl-8 text-surface-container-lowest">&lt;/section&gt;</div>
+<div class="pl-4 text-tertiary-fixed-dim">&lt;/c:forEach&gt;</div>
+<!-- JSTL Conditional Section -->
+<div class="pl-4 pt-2 text-tertiary-fixed-dim">
+            &lt;c:if test="<span class="text-secondary-fixed">${not empty candidate.certifications}</span>"&gt;
+          </div>
+<div class="pl-8 text-surface-container-lowest">
+            &lt;div class="cert-matrix"&gt;
+              <span class="text-surface-container-lowest/40">&lt;!-- Verified Credentials --&gt;</span>
+            &lt;/div&gt;
+          </div>
+<div class="pl-4 text-tertiary-fixed-dim">&lt;/c:if&gt;</div>
+<div class="text-surface-container-lowest pt-2">&lt;/div&gt;</div>
+</div>
+<!-- Source Footer Stats -->
+<div class="bg-surface-container px-space-md py-space-xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm">memory</span>
+<span>Heap Scope: request.getAttribute("candidate")</span>
+</div>
+<span class="font-mono text-secondary font-bold">WAR_ARCHIVE: resusass-core.war</span>
+</div>
+</div>
+<!-- RIGHT PANE: Rendered Live Resume Print & Screen Deck (7 cols desktop) -->
+<div class="xl:col-span-7 flex flex-col gap-space-sm">
+<!-- Live Preview Stage Controls -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">devices</span>
+<span class="font-label-md text-label-md font-bold text-on-surface uppercase">Live Render Canvas</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-1.5 py-0.5 rounded font-mono font-bold">
+              SCALE: 100%
+            </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline hidden sm:inline">CANVAS DENSITY:</span>
+<button class="px-2 py-1 bg-surface-container text-on-surface rounded font-label-sm text-label-sm font-bold" type="button">A4 SHEET</button>
+<button class="px-2 py-1 bg-surface-container-high text-on-surface-variant rounded font-label-sm text-label-sm" type="button">US LETTER</button>
+</div>
+</div>
+<!-- Live Resume Render Container -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-xl p-space-lg flex flex-col gap-space-lg relative transition-all duration-300" id="resume-render-canvas">
+<!-- Decorative Top Technical Header Pill Bar -->
+<div class="flex items-center justify-between border-b pb-space-sm border-outline-variant/30">
+<div class="flex items-center gap-space-xs font-mono font-bold text-label-sm text-outline">
+<span>DOC_ID: RSU-98104-X</span>
+<span>•</span>
+<span>RENDERER: TOMCAT/10.1.24</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded font-bold uppercase tracking-wider">
+                ATS OPTIMIZED: 99.4%
+              </span>
+</div>
+</div>
+<!-- Header / Candidate Persona -->
+<div class="bg-primary rounded-xl p-space-lg text-on-primary relative overflow-hidden shadow-md" id="candidate-hero-panel">
+<!-- Graphic background vector accent -->
+<div class="absolute right-0 top-0 translate-x-8 -translate-y-8 pointer-events-none opacity-20">
+<svg class="fill-none stroke-current" height="220" stroke-width="1.5" viewbox="0 0 100 100" width="220">
+<circle cx="50" cy="50" r="48" stroke-dasharray="3 3"></circle>
+<circle cx="50" cy="50" r="36"></circle>
+<line x1="50" x2="50" y1="0" y2="100"></line>
+<line x1="0" x2="100" y1="50" y2="50"></line>
+</svg>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md relative z-10">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold uppercase px-2 py-0.5 rounded shadow-sm">
+                    AVAILABLE FOR ARCHITECTURE LEAD
+                  </span>
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-wider">
+                    EXPRESSION_LANG • ${candidate.availability}
+                  </span>
+</div>
+<h1 class="font-display-xl text-display-xl tracking-tight uppercase text-on-primary mt-1" id="render-fullname">
+                  VIKTOR V. CROSS
+                </h1>
+<p class="font-headline-sm text-headline-sm text-primary-fixed" id="render-role">
+                  Principal Distributed Systems Architect &amp; Performance Engineer
+                </p>
+<div class="flex items-center gap-space-md mt-2 text-surface-container-lowest/80 font-body-sm text-body-sm flex-wrap">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span id="render-location">Austin, TX (Remote Tier-1)</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">alternate_email</span>
+<span>v.cross@kernel-infra.io</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base">terminal</span>
+<span>github.com/viktor-cross</span>
+</span>
+</div>
+</div>
+<!-- Metric Dial (ATS & Hard Tech Match) -->
+<div class="flex flex-col items-center justify-center p-space-md bg-inverse-surface/30 backdrop-blur rounded-xl shrink-0">
+<span class="font-label-sm text-label-sm text-secondary-fixed font-mono uppercase font-bold">ATS MATCH RATE</span>
+<span class="font-display-xl text-display-xl font-mono text-secondary-fixed font-bold leading-none mt-1">99.4<span class="text-xl">%</span></span>
+<span class="font-label-sm text-label-sm text-surface-container-lowest/70 mt-1">Jasper Verified</span>
+</div>
+</div>
+</div>
+<!-- Section: Professional Summary -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm border-b pb-1 border-outline-variant/30">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">01 // Architectural Focus</span>
+<span class="font-label-sm text-label-sm text-primary font-mono ml-auto font-bold">&lt;c:out value="${candidate.summary}"/&gt;</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed" id="render-summary">
+              Veteran distributed systems builder with 11+ years engineering ultra-low-latency backend infrastructure, microservices orchestration, and high-throughput transactional pipelines. Pioneered Java 21 Virtual Threads migration servicing 140k req/sec across dual-cloud clusters with 99.999% SLA adherence.
+            </p>
+</div>
+<!-- Section: Work History (Rendered from JSTL forEach) -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm border-b pb-1 border-outline-variant/30">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">02 // Experience Iteration (c:forEach)</span>
+<span class="font-label-sm text-label-sm text-outline font-mono ml-auto">3 NODES RESOLVED</span>
+</div>
+<!-- Job 1 -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs transition-all hover:bg-surface-container">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div class="flex items-center gap-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Principal Systems Architect</h3>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded font-bold">@NEXUS_CORE</span>
+</div>
+<span class="font-label-md text-label-md text-outline font-mono">2021 — PRESENT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Headed the complete transformation of legacy monolith systems into event-driven Java 21 micro-engines. Implemented asynchronous Kafka topologies eliminating 480ms p99 latency spikes during black-swan order surges.
+              </p>
+<div class="flex items-center gap-1.5 flex-wrap mt-1">
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2 py-1 rounded font-mono shadow-sm">&lt;Java21/&gt;</span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2 py-1 rounded font-mono shadow-sm">&lt;Tomcat10/&gt;</span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2 py-1 rounded font-mono shadow-sm">&lt;Kafka/&gt;</span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2 py-1 rounded font-mono shadow-sm">&lt;GraalVM/&gt;</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-2 py-1 rounded font-mono font-bold shadow-sm">+94% IOPS</span>
+</div>
+</div>
+<!-- Job 2 -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs transition-all hover:bg-surface-container">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div class="flex items-center gap-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Staff Backend Engineer</h3>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded font-bold">@IRON_SYNAPSE</span>
+</div>
+<span class="font-label-md text-label-md text-outline font-mono">2018 — 2021</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Engineered the core high-throughput XML parser and validation gateway handling banking ledger exchanges. Reduced JVM memory overhead by 37% by implementing SAX stream handlers over heavy DOM tree models.
+              </p>
+<div class="flex items-center gap-1.5 flex-wrap mt-1">
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2 py-1 rounded font-mono shadow-sm">&lt;JAXB/&gt;</span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2 py-1 rounded font-mono shadow-sm">&lt;ServletSpec4/&gt;</span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2 py-1 rounded font-mono shadow-sm">&lt;PostgreSQL/&gt;</span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2 py-1 rounded font-mono shadow-sm">&lt;Redis/&gt;</span>
+</div>
+</div>
+</div>
+<!-- Section: Technical Stack Matrix & Key Certs -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Skill Matrix -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">03 // Core Competencies</span>
+<div class="flex flex-wrap gap-1.5 mt-2">
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-2.5 py-1 rounded font-mono font-bold">Java Virtual Machine</span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded font-mono shadow-sm">JSTL / JSP 3.1</span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded font-mono shadow-sm">Spring Boot 3</span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded font-mono shadow-sm">Apache Tomcat</span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded font-mono shadow-sm">Docker / K8s</span>
+<span class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded font-mono shadow-sm">Distributed Cache</span>
+</div>
+</div>
+<!-- Certs / JSTL Conditional Block -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">04 // Verified Tokens</span>
+<div class="flex flex-col gap-2 mt-1">
+<div class="flex items-center justify-between text-body-sm font-bold text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-lg">verified</span>
+                    Oracle Certified Java SE 21 Architect
+                  </span>
+<span class="font-mono text-outline font-normal">#992-01</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-bold text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-lg">verified</span>
+                    AWS Certified Solutions Architect — Pro
+                  </span>
+<span class="font-mono text-outline font-normal">#SAP-C02</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Print Deck Footer Badge -->
+<div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/30 text-outline font-label-sm text-label-sm">
+<span>RESUSASS JSTL RUNTIME • COMPILED VIA JASPER ENGINE 10.1</span>
+<span>CANDIDATE HASH: 9fa12e-bc88</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Expression Language (EL) Scope Inspector & Live Data Injector -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-md mb-space-lg">
+<div class="flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">account_tree</span>
+<span class="font-headline-sm text-headline-sm text-on-surface uppercase">
+            JSP Expression Language (EL) Live Scope Inspector
+          </span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-high px-space-sm py-1 rounded text-on-surface-variant font-mono">
+          PAGE_CONTEXT: REQUEST_SCOPE
+        </span>
+</div>
+<!-- Scope Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-mono text-label-sm">
+<thead>
+<tr class="bg-surface-container-highest text-on-surface uppercase border-b border-outline-variant/20">
+<th class="py-space-xs px-space-sm">EL Target Expression</th>
+<th class="py-space-xs px-space-sm">Resolved Type</th>
+<th class="py-space-xs px-space-sm">Evaluated Value</th>
+<th class="py-space-xs px-space-sm">Tag Handling</th>
+<th class="py-space-xs px-space-sm text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10 text-on-surface-variant">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-xs px-space-sm text-primary font-bold">${candidate.fullName}</td>
+<td class="py-space-xs px-space-sm">java.lang.String</td>
+<td class="py-space-xs px-space-sm font-bold text-on-surface">"VIKTOR V. CROSS"</td>
+<td class="py-space-xs px-space-sm"><span class="bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.5 rounded text-xs font-bold">c:out escaped</span></td>
+<td class="py-space-xs px-space-sm text-right">
+<button class="text-primary hover:underline font-bold" onclick="editElToken('candidate.fullName')" type="button">Mutate</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-xs px-space-sm text-primary font-bold">${candidate.roleTitle}</td>
+<td class="py-space-xs px-space-sm">java.lang.String</td>
+<td class="py-space-xs px-space-sm font-bold text-on-surface">"Principal Distributed Systems Architect"</td>
+<td class="py-space-xs px-space-sm"><span class="bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.5 rounded text-xs font-bold">c:out escaped</span></td>
+<td class="py-space-xs px-space-sm text-right">
+<button class="text-primary hover:underline font-bold" onclick="editElToken('candidate.roleTitle')" type="button">Mutate</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-xs px-space-sm text-primary font-bold">${candidate.experienceList}</td>
+<td class="py-space-xs px-space-sm">java.util.ArrayList&lt;JobBean&gt;</td>
+<td class="py-space-xs px-space-sm font-bold text-on-surface">[2 records in collection]</td>
+<td class="py-space-xs px-space-sm"><span class="bg-primary-fixed text-on-primary-fixed px-1.5 py-0.5 rounded text-xs font-bold">c:forEach loop</span></td>
+<td class="py-space-xs px-space-sm text-right">
+<button class="text-primary hover:underline font-bold" onclick="editElToken('candidate.experienceList')" type="button">Inspect</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-xs px-space-sm text-primary font-bold">${candidate.atsScore}</td>
+<td class="py-space-xs px-space-sm">java.lang.Double</td>
+<td class="py-space-xs px-space-sm font-bold text-secondary">0.994</td>
+<td class="py-space-xs px-space-sm"><span class="bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded text-xs font-bold">fmt:formatPercent</span></td>
+<td class="py-space-xs px-space-sm text-right">
+<button class="text-primary hover:underline font-bold" onclick="editElToken('candidate.atsScore')" type="button">Mutate</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let activeTheme = 'cyber-cobalt';
+  let isPrintMode = false;
+
+  function selectTheme(themeName, btnEl) {
+    activeTheme = themeName;
+    
+    // Clear ring highlight on cards
+    document.querySelectorAll('.theme-card').forEach(card => {
+      card.classList.remove('ring-2', 'ring-primary');
+      const badge = card.querySelector('.animate-ping');
+      if (badge && badge.parentElement) {
+        badge.parentElement.remove();
+      }
+    });
+
+    // Apply active ring to clicked button
+    btnEl.classList.add('ring-2', 'ring-primary');
+    
+    const activeBadge = document.createElement('div');
+    activeBadge.className = 'absolute top-3 right-3 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold px-space-xs py-0.5 rounded shadow-sm flex items-center gap-1';
+    activeBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-on-secondary-fixed animate-ping"></span>ACTIVE';
+    btnEl.appendChild(activeBadge);
+
+    // Swap Render Canvas Styles
+    const heroPanel = document.getElementById('candidate-hero-panel');
+    const canvas = document.getElementById('resume-render-canvas');
+
+    if (themeName === 'neon-executive') {
+      heroPanel.className = 'bg-secondary-fixed rounded-xl p-space-lg text-on-secondary-fixed relative overflow-hidden shadow-md';
+      heroPanel.querySelector('h1').className = 'font-display-xl text-display-xl tracking-tight uppercase text-on-secondary-fixed mt-1';
+      heroPanel.querySelector('#render-role').className = 'font-headline-sm text-headline-sm text-on-secondary-fixed font-bold';
+      canvas.className = 'w-full bg-surface-container-lowest rounded-xl shadow-xl p-space-lg flex flex-col gap-space-lg relative transition-all duration-300 ring-2 ring-secondary-fixed';
+    } else if (themeName === 'monochrome-hacker') {
+      heroPanel.className = 'bg-inverse-surface rounded-xl p-space-lg text-surface-container-lowest relative overflow-hidden shadow-md';
+      heroPanel.querySelector('h1').className = 'font-display-xl text-display-xl tracking-tight font-mono uppercase text-surface-container-lowest mt-1';
+      heroPanel.querySelector('#render-role').className = 'font-headline-sm text-headline-sm text-surface-container-lowest font-mono';
+      canvas.className = 'w-full bg-surface-container-lowest rounded-xl shadow-xl p-space-lg flex flex-col gap-space-lg relative transition-all duration-300 ring-2 ring-inverse-surface';
+    } else if (themeName === 'minimal-editorial') {
+      heroPanel.className = 'bg-surface-container-high rounded-xl p-space-lg text-on-surface relative overflow-hidden shadow-md';
+      heroPanel.querySelector('h1').className = 'font-display-xl text-display-xl tracking-tight uppercase text-on-surface mt-1';
+      heroPanel.querySelector('#render-role').className = 'font-headline-sm text-headline-sm text-tertiary';
+      canvas.className = 'w-full bg-surface-container-lowest rounded-xl shadow-xl p-space-lg flex flex-col gap-space-lg relative transition-all duration-300';
+    } else {
+      // cyber-cobalt default
+      heroPanel.className = 'bg-primary rounded-xl p-space-lg text-on-primary relative overflow-hidden shadow-md';
+      heroPanel.querySelector('h1').className = 'font-display-xl text-display-xl tracking-tight uppercase text-on-primary mt-1';
+      heroPanel.querySelector('#render-role').className = 'font-headline-sm text-headline-sm text-primary-fixed';
+      canvas.className = 'w-full bg-surface-container-lowest rounded-xl shadow-xl p-space-lg flex flex-col gap-space-lg relative transition-all duration-300';
+    }
+  }
+
+  function togglePrintLayout() {
+    isPrintMode = !isPrintMode;
+    const canvas = document.getElementById('resume-render-canvas');
+    const label = document.getElementById('label-print-toggle');
+    const btn = document.getElementById('btn-print-layout');
+
+    if (isPrintMode) {
+      canvas.classList.add('max-w-2xl', 'mx-auto', 'ring-4', 'ring-on-surface/20');
+      label.innerText = 'Standard Screen View';
+      btn.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed');
+      btn.classList.remove('bg-surface-container-high', 'text-on-surface');
+    } else {
+      canvas.classList.remove('max-w-2xl', 'mx-auto', 'ring-4', 'ring-on-surface/20');
+      label.innerText = 'Print Layout';
+      btn.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed');
+      btn.classList.add('bg-surface-container-high', 'text-on-surface');
+    }
+  }
+
+  function injectMockData() {
+    const names = ['KAI CHEN', 'ELENA ROSTOVA', 'SABRINA VANCE', 'MARCUS A. REED'];
+    const roles = [
+      'Staff Infrastructure Architect & SRE Lead',
+      'Principal Kernel & Virtual Machine Engineer',
+      'Director of Enterprise Cloud Security',
+      'High-Frequency Systems Performance Engineer'
+    ];
+    const cities = ['Seattle, WA', 'Zurich, Switzerland', 'Berlin, Germany', 'San Francisco, CA'];
+
+    const randomIndex = Math.floor(Math.random() * names.length);
+    document.getElementById('render-fullname').innerText = names[randomIndex];
+    document.getElementById('render-role').innerText = roles[randomIndex];
+    document.getElementById('render-location').innerText = cities[randomIndex];
+  }
+
+  function simulatePdfPrint() {
+    window.print();
+  }
+
+  function exportHtmlBundle() {
+    alert('JSP Bundle Generator: Compiling resume_template.jsp + JSTL expressions into compiled static HTML archive (resusass_export.zip). Download ready.');
+  }
+
+  function copyJspSnippet() {
+    const sample = `<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<div class="resume">
+  <h1>\${candidate.fullName}</h1>
+  <p>\${candidate.roleTitle}</p>
+  <c:forEach items="\${candidate.experienceList}" var="job">
+    <div class="job"><h3>\${job.title}</h3></div>
+  </c:forEach>
+</div>`;
+    navigator.clipboard.writeText(sample).then(() => {
+      alert('JSP template snippet copied to clipboard!');
+    });
+  }
+
+  function editElToken(tokenName) {
+    const val = prompt(`Mutate Expression Language token [${tokenName}]:`);
+    if (val !== null && val.trim() !== '') {
+      if (tokenName === 'candidate.fullName') {
+        document.getElementById('render-fullname').innerText = val;
+      } else if (tokenName === 'candidate.roleTitle') {
+        document.getElementById('render-role').innerText = val;
+      }
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest border-t-2 border-primary-container"><div class="bg-primary-container text-on-primary py-1 px-gutter overflow-hidden flex items-center gap-space-lg"><span class="font-label-sm text-label-sm font-bold uppercase tracking-widest shrink-0">HOTKEYS //</span><span class="font-label-sm text-label-sm uppercase font-mono tracking-wider shrink-0">[CTRL+S] COMPILE XML // [CTRL+J] EXEC SERVLET // [CTRL+P] RENDER JSP // [ESC] KILL JVM THREAD</span></div><div class="w-full px-gutter py-space-md flex flex-col md:flex-row items-center justify-between gap-space-md border-t border-on-surface/20"><div class="flex flex-col gap-1"><span class="font-label-md text-label-md font-bold uppercase text-on-surface">RESUSASS — HIGH-VOLTAGE ARCHITECTURE</span><span class="font-body-sm text-body-sm text-on-surface-variant">Powered by Java Virtual Machine, Apache Tomcat Servlets, JSP 3.1 &amp; XML SAX/DOM Parsers</span></div><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm bg-surface-container-high px-space-sm py-1 border border-on-surface uppercase">SERVLET SPEC 6.0</span><span class="font-label-sm text-label-sm bg-surface-container-high px-space-sm py-1 border border-on-surface uppercase">XML SCHEMA 1.3</span></div></div></footer></div></body></html>

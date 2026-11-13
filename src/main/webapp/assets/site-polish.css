@@ -1,0 +1,121 @@
+/* A roomier, high-contrast type scale tuned for Chiller's narrow display forms. */
+body{font-size:18px;line-height:1.55}
+.topbar{height:84px;padding-right:max(calc((100vw - 1400px)/2),36px);padding-left:max(calc((100vw - 1400px)/2),36px)}
+.brand{font-size:24px;letter-spacing:0}
+.brand-mark{width:36px;height:36px;font-size:20px}
+.main-nav{gap:27px;margin-left:42px}
+.main-nav a,.sign-in-link{font-size:17px;letter-spacing:.015em}
+.top-actions{gap:17px}
+.header-cta{min-height:48px!important;padding:10px 18px!important;font-size:18px!important}
+.hero{max-width:1440px;min-height:690px;padding:78px 54px 86px;gap:66px;background:radial-gradient(ellipse at 80% 38%,#d7ff2740 0,transparent 32%),linear-gradient(112deg,#f0eff4f2 0%,#ffffffeb 52%,#f1f1faef 100%)}
+.hero-copy{max-width:670px}
+.eyebrow{font-size:14px;letter-spacing:.075em}
+.eyebrow-mark{font-size:18px}
+.hero h1{font-size:clamp(68px,6.3vw,88px);line-height:.99;letter-spacing:-.025em;margin:25px 0 20px}
+.hero-copy>p{font-size:20px;line-height:1.55;max-width:570px}
+.hero-actions{gap:25px;margin-top:34px}
+.hero-cta{min-height:56px!important;padding:12px 21px!important;font-size:19px!important}
+.text-link{font-size:16px}
+.hero-assurance{font-size:15px;gap:12px;margin-top:30px}
+.assurance-icon{width:21px;height:21px;font-size:13px}
+.hero-visual{min-height:500px}
+.hero-resume{transform:rotate(2deg) scale(1.08)}
+.hero-note{padding:13px 16px}
+.hero-note b{font-size:15px}
+.hero-note small{font-size:12px}
+.hero-caption{font-size:11px}
+.assurance-strip{max-width:1220px;gap:55px;padding:27px 30px}
+.assurance-strip b{font-size:16px}
+.assurance-strip small{font-size:13px}
+.strip-icon{width:39px;height:39px;font-size:20px}
+.feature-section,.process-section{max-width:1400px;padding-right:54px;padding-left:54px}
+.feature-section{padding-top:100px;padding-bottom:104px}
+.section-intro{max-width:750px;margin-bottom:45px}
+.section-intro h2,.process-heading h2{font-size:clamp(48px,5.3vw,66px);line-height:1.01;letter-spacing:-.025em}
+.section-intro>p{font-size:18px;line-height:1.65;max-width:650px}
+.feature-grid{gap:20px}
+.feature-card{padding:26px;min-height:370px}
+.feature-number{font-size:12px}
+.feature-illustration{height:180px}
+.feature-card h3{font-size:24px;line-height:1.1}
+.feature-card p{font-size:16px;line-height:1.55}
+.ats-section{max-width:1400px;min-height:440px;margin:0 auto;border-radius:9px}
+.ats-copy h2{font-size:clamp(42px,4.5vw,58px);line-height:1.03}
+.ats-copy>p{font-size:17px;line-height:1.65}
+.button-light{min-height:49px!important;padding:11px 17px!important;font-size:17px!important}
+.ats-window{transform:scale(1.08)}
+.ats-side-label{font-size:11px}
+.process-section{padding-top:94px;padding-bottom:94px}
+.process-heading h2{font-size:58px}
+.process-steps{gap:18px;margin-top:42px}
+.process-steps article{min-height:220px;padding:25px}
+.process-index{width:42px;height:42px;font-size:13px}
+.process-steps h3{font-size:23px}
+.process-steps p{max-width:345px;font-size:15px;line-height:1.6}
+.templates-section{max-width:1440px;padding:100px 54px 110px;background:linear-gradient(180deg,#f1eff6a8 0%,#fbfaff 72%,transparent 100%)}
+.templates-heading{margin-bottom:22px}
+.templates-heading h2{font-size:clamp(58px,6vw,76px);line-height:.98}
+.templates-heading>div:first-child>p{max-width:650px;font-size:18px;line-height:1.55}
+.template-controls{gap:12px}
+.template-arrow{width:56px;height:56px;font-size:24px}
+.ats-disclaimer{font-size:13px;margin-bottom:24px}
+.templates-viewport{margin-right:-54px;margin-left:-54px;padding-right:54px;padding-left:54px}
+.templates-track{gap:23px}
+.template-card{flex-basis:330px;min-height:500px;padding:14px;box-shadow:6px 6px 0 var(--stitch-ink)}
+.template-preview{height:350px;padding:25px 23px}
+.template-meta{padding:17px 4px 5px}
+.template-meta>span{font-size:11px}
+.template-meta h3{font-size:25px;margin:8px 0 5px}
+.template-meta p{font-size:14px}
+.template-hover{padding:31px}
+.template-hover:before{font-size:12px;margin-bottom:43px}
+.template-hover h3{font-size:31px;margin:-31px 0 33px}
+.ats-score{font-size:12px}
+.ats-score b{font-size:56px}
+.ats-score small{font-size:14px}
+.template-hover p{font-size:16px;line-height:1.55;margin:17px 0 29px}
+.template-choose{min-height:50px;padding:0 15px;font-size:15px}
+.builder-banner{max-width:1400px;padding:48px 7%;margin-bottom:90px}
+.builder-banner h2{font-size:clamp(43px,4.8vw,60px);line-height:1.02}
+.site-footer{font-size:15px}
+.footer-brand{font-size:19px}
+.toast{font-size:15px;padding:13px 18px}
+
+/* The selected resume remains legible in Times New Roman, including its input labels. */
+.builder-topbar .brand{font-size:23px}
+.builder-top-title .eyebrow{font-size:12px}
+.builder-template-name{font-size:18px}
+.builder-topbar .document-state{font-size:12px}
+.builder-topbar .button{font-size:14px}
+.builder-main{max-width:1600px;padding:44px 42px 84px}
+.builder-heading h1{font-size:clamp(48px,4.6vw,62px)}
+.builder-heading p{font-size:18px}
+.export-actions .button{min-height:50px;font-size:15px!important;padding:12px 17px!important}
+.builder-layout .editor-card-header{padding:24px 26px 20px}
+.builder-layout .editor-card-header h2{font-size:26px}
+.builder-layout .card-kicker{font-size:12px}
+.builder-layout .required-note{font-size:12px}
+.builder-layout .section-nav{padding-right:23px;padding-left:23px}
+.builder-layout .section-nav-item{font-size:12px;padding:15px 10px}
+.builder-layout .nav-step{font-size:11px}
+.builder-layout .form-section{padding:26px}
+.builder-layout .section-number{width:32px;height:32px;font-size:12px}
+.builder-layout .form-section-heading h3{font-size:19px}
+.builder-layout .form-section-heading p{font-size:14px}
+.builder-layout .field{font-size:14px;gap:8px}
+.builder-layout .field input,.builder-layout .field textarea,.builder-layout .field select{padding:13px 14px;font-size:16px;min-height:48px}
+.builder-layout .field textarea{min-height:110px}
+.builder-layout .text-button{padding:10px 12px;font-size:12px}
+.experience-index{font-size:11px}
+.builder-layout .remove-entry{font-size:19px}
+.builder-layout .form-footer{padding:19px 24px}
+.builder-layout .privacy-note{font-size:13px}
+.builder-layout .form-footer .button{font-size:14px!important;min-height:46px}
+.builder-layout .preview-toolbar{height:59px}
+.builder-layout .preview-label,.builder-layout .page-count{font-size:12px}
+.builder-layout .preview-footer>span{font-size:11px}
+.builder-layout .preview-action{font-size:11px}
+
+@media(max-width:1000px){.hero{padding-right:30px;padding-left:30px;gap:28px}.hero h1{font-size:70px}.feature-section,.process-section,.templates-section{padding-right:30px;padding-left:30px}.templates-viewport{margin-right:-30px;margin-left:-30px;padding-right:30px;padding-left:30px}}
+@media(max-width:720px){.topbar{height:auto;min-height:76px;padding:10px 18px}.brand{font-size:22px}.brand-mark{width:33px;height:33px;font-size:18px}.main-nav a,.sign-in-link{font-size:16px}.hero{min-height:0;padding:56px 22px 34px;gap:0}.hero h1{font-size:clamp(54px,12vw,70px)}.hero-copy>p{font-size:18px}.hero-actions{gap:17px}.hero-cta{font-size:17px!important}.text-link{font-size:15px}.hero-visual{min-height:385px;margin:15px auto 0;transform:scale(.92)}.assurance-strip{gap:15px;padding:21px 15px}.assurance-strip b{font-size:13px}.assurance-strip small{font-size:11px}.feature-section,.process-section{padding:73px 22px}.section-intro h2,.process-heading h2{font-size:48px}.section-intro>p{font-size:16px}.feature-card{padding:20px;min-height:320px}.feature-card h3{font-size:21px}.feature-card p{font-size:14px}.ats-copy h2{font-size:42px}.ats-copy>p{font-size:15px}.process-steps h3{font-size:20px}.process-steps p{font-size:14px}.templates-section{padding:72px 22px 80px}.templates-heading h2{font-size:54px}.templates-heading>div:first-child>p{font-size:16px}.templates-viewport{margin-right:-22px;margin-left:-22px;padding-right:22px;padding-left:22px}.template-card{flex-basis:300px}.template-preview{height:320px}.template-hover p{font-size:14px}.template-choose{font-size:14px}.builder-banner h2{font-size:40px}.builder-main{padding:34px 20px 65px}.builder-heading h1{font-size:46px}.builder-heading p{font-size:16px}.builder-layout .editor-card-header h2{font-size:23px}.builder-layout .form-section-heading h3{font-size:17px}.builder-layout .field{font-size:13px}.builder-layout .field input,.builder-layout .field textarea,.builder-layout .field select{font-size:15px}}
+@media(max-width:480px){.topbar{padding:9px 13px}.brand{font-size:19px}.brand-mark{width:30px;height:30px}.header-cta{font-size:15px!important;padding:8px 12px!important}.hero{padding:45px 16px 24px}.hero h1{font-size:51px}.hero-copy>p{font-size:16px}.hero-actions{flex-wrap:wrap}.hero-cta{font-size:15px!important}.text-link{font-size:14px}.hero-assurance{font-size:12px}.hero-visual{transform:scale(.8);min-height:320px;margin:-1px auto -22px}.assurance-strip{padding:17px 10px}.assurance-strip b{font-size:11px}.assurance-strip small{font-size:9px}.feature-section,.process-section{padding:60px 15px}.section-intro h2,.process-heading h2{font-size:41px}.section-intro>p{font-size:15px}.feature-card h3{font-size:20px}.feature-card p{font-size:14px}.process-steps article{padding:19px}.process-steps h3{font-size:19px}.process-steps p{font-size:14px}.templates-section{padding:57px 15px 64px}.templates-heading h2{font-size:47px}.templates-heading>div:first-child>p{font-size:15px}.template-card{flex-basis:82vw}.template-meta h3{font-size:23px}.builder-banner h2{font-size:34px}.builder-main{padding:27px 12px 45px}.builder-heading h1{font-size:39px}.builder-layout .form-section-heading p{font-size:12px}.builder-layout .privacy-note{font-size:11px}}

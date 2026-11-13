@@ -1,0 +1,5 @@
+/* Display font names are kept local-first; licensed font files can be added here. */
+body,body *{font-family:'Kugile','Bodoni 72','Didot',Georgia,serif!important}
+.hero,.hero *{font-family:'Hiragenda','Segoe Script','Brush Script MT',cursive!important}
+.hero-resume,.hero-resume *,.template-preview,.template-preview *,.builder-layout .paper,.builder-layout .paper *{font-family:'Times New Roman',Times,serif!important}
+@media print{.builder-layout .paper,.builder-layout .paper *{font-family:'Times New Roman',Times,serif!important}}

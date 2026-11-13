@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"error-container":"#ffdad6","surface-container-high":"#eae7ea","inverse-primary":"#bdc2ff","secondary-container":"#c1f100","secondary":"#506600","primary-fixed-dim":"#bdc2ff","on-primary":"#ffffff","error":"#ba1a1a","surface-container-lowest":"#ffffff","outline-variant":"#c5c5db","on-primary-fixed-variant":"#001de0","on-surface":"#1c1b1e","surface-dim":"#dcd9dc","surface":"#fcf8fb","surface-bright":"#fcf8fb","on-error":"#ffffff","tertiary":"#56009b","on-tertiary":"#ffffff","on-secondary-container":"#546b00","secondary-fixed":"#c3f400","on-secondary-fixed":"#161e00","on-secondary":"#ffffff","primary":"#0017be","outline":"#757589","inverse-surface":"#313032","secondary-fixed-dim":"#abd600","on-primary-container":"#bbc1ff","on-tertiary-fixed":"#2b0052","on-secondary-fixed-variant":"#3c4d00","primary-fixed":"#dfe0ff","background":"#fcf8fb","tertiary-container":"#721dc3","on-tertiary-container":"#dab7ff","tertiary-fixed":"#efdbff","inverse-on-surface":"#f3f0f3","primary-container":"#0022ff","on-primary-fixed":"#000766","surface-tint":"#2b3fff","surface-variant":"#e5e1e4","on-surface-variant":"#444557","tertiary-fixed-dim":"#dbb8ff","surface-container-low":"#f6f2f6","on-tertiary-fixed-variant":"#6600b7","surface-container-highest":"#e5e1e4","surface-container":"#f0edf0","on-background":"#1c1b1e","on-error-container":"#93000a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2.5rem","gutter":"1.5rem","space-xs":"0.25rem","space-md":"1rem","space-lg":"1.5rem","space-sm":"0.5rem","space-2xl":"4rem","margin-mobile":"1.25rem","margin":"2.5rem","gutter-mobile":"1rem"},"fontFamily":{"headline-lg":["Syne"],"headline-md":["Syne"],"display-xl":["Syne"],"body-lg":["Space Grotesk"],"body-md":["Space Grotesk"],"label-sm":["JetBrains Mono"],"display-xl-mobile":["Syne"],"label-lg":["JetBrains Mono"],"headline-sm":["Syne"],"body-sm":["Space Grotesk"],"headline-lg-mobile":["Syne"],"label-md":["JetBrains Mono"]},"fontSize":{"headline-lg":["36px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"700"}],"display-xl":["56px",{"lineHeight":"60px","letterSpacing":"-0.03em","fontWeight":"800"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"display-xl-mobile":["36px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.05em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"26px","fontWeight":"600"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"500"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b-2 border-on-surface"><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="ResuSass Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBRIqOf-Vq3h2xM1NfbcDB0Ua8x_Bh25QRDoSq6IBDgGhu88bO69DoVhrn9NczNRVpJ4KwvplN8d2WLNBECBV6TKowkbA9cDfYu0t7tNE5wln-Ho3R0vc942IaO-lP5qvMfN00KQM-RZaguNdKd4BnWUClf97WbZkyrgJeQiqmVt3zqAcRi7brXKqY0_JGi-cBWM6ZmyU50qpcgfXxNuj055R6tueZu0uzjJsnmO_56kw"/><span class="font-headline-md text-headline-md tracking-tight uppercase text-on-surface">RESUSASS</span><div class="hidden xl:flex items-center gap-space-xs ml-space-sm"><span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-space-sm py-1 border border-on-surface uppercase font-bold tracking-wider">JRE 21 Verified</span><span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-space-sm py-1 border border-on-surface uppercase font-bold tracking-wider">100% Non-AI Human Craft</span></div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-bold shadow-[2px_2px_0px_#1c1b1e]"><a class="font-label-md text-label-md uppercase px-space-sm py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="resume-studio-builder" href="#">Resume Studio (Builder)</a><a class="font-label-md text-label-md uppercase px-space-sm py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="java-servlet-engine" href="#">Java Servlet Engine</a><a aria-current="page" class="uppercase px-space-sm py-2 transition-all bg-primary-container text-on-primary font-bold shadow-[2px_2px_0px_#1c1b1e]" data-path="xml-schema-editor" href="#">XML Schema Editor</a><a class="font-label-md text-label-md uppercase px-space-sm py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="jsp-preview-deck" href="#">JSP Preview Deck</a><a class="font-label-md text-label-md uppercase px-space-sm py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="career-vault" href="#">Career Vault</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden sm:flex flex-col text-right"><span class="font-label-sm text-label-sm uppercase text-outline">STATUS: DISPATCHED</span><span class="font-label-md text-label-md font-bold text-primary">ROOT_OPERATOR</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-on-surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0RX20TIFjZRZUgTia1uDxOeP6GIGkyDD0x7J3lwNpb92Sjh29bdUH7epTg4EuOuVXV7Ff2N_DkwtmygfzvNeP0r5y8QFpYpbrK_dRKf_547TWnESTK3unrKEKnwAgTK8AsJAiGCVdsj5Ddmw_kvfIujD4dkWUX9bmwPgajQv7XBrg7gtd5t10srxv0xUtyrDoR2oitTuoTLkavDklEOkWOPPEUKmmzsZMceMC0zW7"/></div></div></header><aside class="fixed left-0 top-20 bottom-0 w-64 bg-surface-container-low border-r-2 border-on-surface z-40 hidden md:flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-sm px-space-sm"><div class="px-space-sm py-space-xs bg-surface-container-highest border border-on-surface mb-space-sm"><span class="font-label-sm text-label-sm uppercase text-outline block">SUBSYSTEM NAV</span><span class="font-label-md text-label-md font-bold text-on-surface">Tomcat 10.1 Rack</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-bold shadow-[2px_2px_0px_#1c1b1e]"><a class="flex items-center gap-space-sm px-space-sm py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md uppercase" data-path="resume-studio-builder" href="#"><span class="material-symbols-outlined text-lg">terminal</span>Builder Engine</a><a class="flex items-center gap-space-sm px-space-sm py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md uppercase" data-path="java-servlet-engine" href="#"><span class="material-symbols-outlined text-lg">memory</span>Servlet Core</a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 transition-all uppercase bg-primary-container text-on-primary font-bold shadow-[2px_2px_0px_#1c1b1e]" data-path="xml-schema-editor" href="#"><span class="material-symbols-outlined text-lg">code</span>XML Parser</a><a class="flex items-center gap-space-sm px-space-sm py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md uppercase" data-path="jsp-preview-deck" href="#"><span class="material-symbols-outlined text-lg">layers</span>JSP Deck</a><a class="flex items-center gap-space-sm px-space-sm py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md uppercase" data-path="career-vault" href="#"><span class="material-symbols-outlined text-lg">inventory_2</span>Vault Repos</a></nav></div><div class="px-space-md flex flex-col gap-space-xs"><div class="p-space-sm bg-secondary-fixed border border-on-surface"><span class="font-label-sm text-label-sm font-bold text-on-secondary-fixed block uppercase">JVM HEAP ALLOC</span><div class="w-full bg-surface-container-lowest h-2 mt-1 border border-on-surface"><div class="bg-primary h-full w-2/3"></div></div></div></div></aside><div class="md:pl-64"><main class="w-full pt-20 bg-surface min-h-[calc(100vh-140px)]"><div class="flex flex-col w-full">
+<div class="p-gutter flex flex-col gap-space-lg w-full">
+<!-- Action / Standard Command Bar -->
+<div class="bg-surface-container-lowest p-space-md shadow-xl flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="bg-primary text-on-primary px-space-sm py-1 font-label-sm text-label-sm uppercase font-bold tracking-wider shadow-sm">
+          SCHEMA 3.4
+        </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">ResumeML v3.4 Strict XSD &amp; DTD Engine</span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-mono">SPEC_ROOT: urn:oasis:names:tc:resumeml:3.4:strict.xsd</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md uppercase px-space-md py-2 font-bold hover:bg-secondary-fixed-dim active:scale-95 shadow-md flex items-center gap-space-xs transition-all" id="validateBtn">
+<span class="material-symbols-outlined text-base">verified</span>
+          Validate Schema
+        </button>
+<button class="bg-surface-container-high text-on-surface font-label-md text-label-md uppercase px-space-md py-2 font-bold hover:bg-surface-container-highest active:scale-95 shadow-sm flex items-center gap-space-xs transition-all" id="formatBtn">
+<span class="material-symbols-outlined text-base">align_horizontal_left</span>
+          Format XML (Tidy)
+        </button>
+<button class="bg-surface-container-high text-on-surface font-label-md text-label-md uppercase px-space-md py-2 font-bold hover:bg-surface-container-highest active:scale-95 shadow-sm flex items-center gap-space-xs transition-all" id="sampleBtn">
+<span class="material-symbols-outlined text-base">data_object</span>
+          Sample Payload
+        </button>
+<button class="bg-primary-container text-on-primary font-label-md text-label-md uppercase px-space-md py-2 font-bold hover:bg-primary active:scale-95 shadow-md flex items-center gap-space-xs transition-all" id="saxRunBtn">
+<span class="material-symbols-outlined text-base">flash_on</span>
+          Parse via SAX Stream
+        </button>
+</div>
+</div>
+<!-- Live Benchmarks Strip -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-low p-space-md shadow-md flex flex-col justify-between">
+<span class="font-label-sm text-label-sm uppercase text-outline">Parser Stream Time</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-headline-md text-headline-md text-primary font-bold font-mono">4.2</span>
+<span class="font-label-sm text-label-sm text-on-surface font-mono">ms (avg)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 mt-2 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed h-full w-[88%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md shadow-md flex flex-col justify-between">
+<span class="font-label-sm text-label-sm uppercase text-outline">Schema Well-Formedness</span>
+<div class="flex items-center gap-space-xs mt-1 text-secondary">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+<span class="font-headline-sm text-headline-sm font-bold uppercase">100% Strict</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline-variant mt-2 font-mono">DOM Tree Depth: 7 levels</span>
+</div>
+<div class="bg-surface-container-low p-space-md shadow-md flex flex-col justify-between">
+<span class="font-label-sm text-label-sm uppercase text-outline">Memory Buffer Usage</span>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold font-mono">612</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">KB allocated</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono font-bold mt-2">Zero Garbage Spikes</span>
+</div>
+<div class="bg-surface-container-low p-space-md shadow-md flex flex-col justify-between">
+<span class="font-label-sm text-label-sm uppercase text-outline">Active Entity Resolver</span>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="bg-secondary-container text-on-secondary-container px-space-xs py-0.5 font-label-sm text-label-sm font-bold uppercase font-mono">DTD: LOCAL_RES</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono truncate mt-2">resume_schema.dtd [v3.4.1]</span>
+</div>
+</div>
+<!-- Main Workspace Split Deck -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left: XML Code Editor Pane (7 Cols) -->
+<div class="xl:col-span-7 bg-surface-container-lowest shadow-xl flex flex-col overflow-hidden">
+<!-- Editor Header -->
+<div class="bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-lg">code</span>
+<span class="font-label-md text-label-md font-bold uppercase tracking-wider font-mono">resume_payload.xml</span>
+<span class="bg-secondary text-on-secondary text-label-sm font-label-sm px-1.5 py-0.5 rounded uppercase font-bold">UTF-8</span>
+</div>
+<div class="flex items-center gap-space-xs text-outline-variant font-label-sm text-label-sm font-mono">
+<span>LINES: 34</span>
+<span class="mx-1">•</span>
+<span>CHARS: 1,489</span>
+<span class="mx-1">•</span>
+<span class="text-secondary-fixed font-bold">SAVED</span>
+</div>
+</div>
+<!-- Syntax Canvas with Line Numbers -->
+<div class="relative bg-surface-container-lowest flex font-mono text-label-md text-label-md overflow-x-auto min-h-[520px]">
+<!-- Line Numbers -->
+<div class="bg-surface-container select-none px-space-sm py-space-md text-outline font-mono text-right flex flex-col gap-1 w-12 shrink-0">
+<span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span><span>09</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span>
+</div>
+<!-- Syntax Content -->
+<div class="p-space-md flex-1 whitespace-pre leading-relaxed select-text font-mono text-on-surface" id="xmlEditorContent">
+<span class="text-outline">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="text-tertiary">&lt;!DOCTYPE</span> <span class="text-primary font-bold">resume</span> <span class="text-tertiary">SYSTEM</span> <span class="text-secondary-fixed-variant font-bold">"resume_schema.dtd"</span><span class="text-tertiary">&gt;</span>
+<span class="text-primary-container font-bold">&lt;resume</span> <span class="text-tertiary">version</span>=<span class="text-secondary-fixed-variant">"3.4"</span> <span class="text-tertiary">humanCrafted</span>=<span class="text-secondary-fixed-variant">"true"</span><span class="text-primary-container font-bold">&gt;</span>
+<span class="text-primary-container font-bold">&lt;candidate</span> <span class="text-tertiary">id</span>=<span class="text-secondary-fixed-variant">"CAN_9821"</span> <span class="text-tertiary">securityClearance</span>=<span class="text-secondary-fixed-variant">"TS/SCI"</span><span class="text-primary-container font-bold">&gt;</span>
+<span class="text-primary font-bold">&lt;personalInfo&gt;</span>
+<span class="text-primary">&lt;fullName&gt;</span>Alex "Blitz" Mercer<span class="text-primary">&lt;/fullName&gt;</span>
+<span class="text-primary">&lt;role&gt;</span>Principal Java Architect<span class="text-primary">&lt;/role&gt;</span>
+<span class="text-primary">&lt;sassyTagline&gt;</span>Turning legacy monoliths into rocket fuel<span class="text-primary">&lt;/sassyTagline&gt;</span>
+<span class="text-primary">&lt;contact&gt;</span>
+<span class="text-primary">&lt;email&gt;</span>blitz.mercer@jvm-dispatch.internal<span class="text-primary">&lt;/email&gt;</span>
+<span class="text-primary">&lt;matrixKey&gt;</span>0x92BC3400FF12<span class="text-primary">&lt;/matrixKey&gt;</span>
+<span class="text-primary">&lt;/contact&gt;</span>
+<span class="text-primary font-bold">&lt;/personalInfo&gt;</span>
+<span class="text-primary font-bold">&lt;experience&gt;</span>
+<span class="text-primary">&lt;position</span> <span class="text-tertiary">company</span>=<span class="text-secondary-fixed-variant">"FinTech Core"</span> <span class="text-tertiary">duration</span>=<span class="text-secondary-fixed-variant">"2021-2024"</span> <span class="text-tertiary">tier</span>=<span class="text-secondary-fixed-variant">"L7"</span><span class="text-primary">&gt;</span>
+<span class="text-primary">&lt;achievement</span> <span class="text-tertiary">impact</span>=<span class="text-secondary-fixed-variant">"+$1.8M ARR"</span><span class="text-primary">&gt;</span>Refactored legacy servlet bottlenecks<span class="text-primary">&lt;/achievement&gt;</span>
+<span class="text-primary">&lt;achievement</span> <span class="text-tertiary">impact</span>=<span class="text-secondary-fixed-variant">"99.999% SLA"</span><span class="text-primary">&gt;</span>Orchestrated zero-downtime JSP migration<span class="text-primary">&lt;/achievement&gt;</span>
+<span class="text-primary">&lt;/position&gt;</span>
+<span class="text-primary">&lt;position</span> <span class="text-tertiary">company</span>=<span class="text-secondary-fixed-variant">"Krypton HyperScale"</span> <span class="text-tertiary">duration</span>=<span class="text-secondary-fixed-variant">"2018-2021"</span><span class="text-primary">&gt;</span>
+<span class="text-primary">&lt;achievement</span> <span class="text-tertiary">impact</span>=<span class="text-secondary-fixed-variant">"140k req/s"</span><span class="text-primary">&gt;</span>Hardened Tomcat workers against memory leakage<span class="text-primary">&lt;/achievement&gt;</span>
+<span class="text-primary">&lt;/position&gt;</span>
+<span class="text-primary font-bold">&lt;/experience&gt;</span>
+<span class="text-primary font-bold">&lt;skills&gt;</span>
+<span class="text-primary">&lt;skill</span> <span class="text-tertiary">category</span>=<span class="text-secondary-fixed-variant">"Runtime"</span> <span class="text-tertiary">mastery</span>=<span class="text-secondary-fixed-variant">"10"</span><span class="text-primary">&gt;</span>Java Virtual Machine (OpenJDK 21)<span class="text-primary">&lt;/skill&gt;</span>
+<span class="text-primary">&lt;skill</span> <span class="text-tertiary">category</span>=<span class="text-secondary-fixed-variant">"Markup"</span> <span class="text-tertiary">mastery</span>=<span class="text-secondary-fixed-variant">"10"</span><span class="text-primary">&gt;</span>XML Schema Validation / SAX / DOM<span class="text-primary">&lt;/skill&gt;</span>
+<span class="text-primary">&lt;skill</span> <span class="text-tertiary">category</span>=<span class="text-secondary-fixed-variant">"Web"</span> <span class="text-tertiary">mastery</span>=<span class="text-secondary-fixed-variant">"9"</span><span class="text-primary">&gt;</span>Apache Tomcat &amp; Servlet Specification 6.0<span class="text-primary">&lt;/skill&gt;</span>
+<span class="text-primary font-bold">&lt;/skills&gt;</span>
+<span class="text-primary-container font-bold">&lt;/candidate&gt;</span>
+<span class="text-primary-container font-bold">&lt;/resume&gt;</span>
+</div>
+</div>
+<!-- Editor Status Strip -->
+<div class="bg-surface-container-high px-space-md py-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm uppercase font-bold text-primary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-ping"></span>
+              Live DOM Listener
+            </span>
+<span class="font-label-sm text-label-sm uppercase text-outline">Root Tag: &lt;resume&gt;</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm font-mono text-outline">DocumentBuilderFactory: org.apache.xerces.jaxp</span>
+</div>
+</div>
+</div>
+<!-- Right: DOM Node Tree Explorer Pane (5 Cols) -->
+<div class="xl:col-span-5 flex flex-col gap-space-md">
+<!-- Tree Header Container -->
+<div class="bg-surface-container-lowest p-space-md shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl">account_tree</span>
+<span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface">DOM Tree Inspector</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="font-label-sm text-label-sm uppercase px-space-xs py-1 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-bold" id="expandAllBtn">Expand</button>
+<button class="font-label-sm text-label-sm uppercase px-space-xs py-1 bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-bold" id="collapseAllBtn">Collapse</button>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Reactive tree projection parsed directly from JAXP Document Object Model. Click elements to highlight attributes and inspect schema validation status.
+          </p>
+<!-- Interactive Tree View Hierarchy -->
+<div class="flex flex-col gap-1 font-mono text-label-md text-label-md select-none bg-surface-container-low p-space-sm rounded">
+<!-- Node: document -->
+<div class="flex items-center gap-space-xs py-1 px-space-xs text-outline">
+<span class="material-symbols-outlined text-sm">description</span>
+<span class="font-bold text-on-surface">#document</span>
+<span class="text-label-sm font-label-sm text-outline-variant font-normal">[Root Context]</span>
+</div>
+<!-- Node: resume (Collapsible) -->
+<div class="ml-space-md flex flex-col gap-1">
+<div class="flex items-center gap-space-xs py-1 px-space-xs bg-surface-container-lowest rounded shadow-sm hover:bg-surface-container-high cursor-pointer transition-all">
+<span class="material-symbols-outlined text-base text-primary">arrow_drop_down</span>
+<span class="text-primary font-bold">&lt;resume&gt;</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.2 rounded font-label-sm text-label-sm font-bold">version="3.4"</span>
+<span class="bg-surface-container-high px-1 py-0.2 font-label-sm text-label-sm text-outline">humanCrafted="true"</span>
+</div>
+<!-- Node: candidate (Nested) -->
+<div class="ml-space-md flex flex-col gap-1">
+<div class="flex items-center gap-space-xs py-1 px-space-xs bg-surface-container-lowest rounded shadow-sm hover:bg-surface-container-high cursor-pointer transition-all">
+<span class="material-symbols-outlined text-base text-primary">arrow_drop_down</span>
+<span class="text-primary font-bold">&lt;candidate&gt;</span>
+<span class="bg-primary-fixed text-on-primary-fixed font-bold px-1.5 font-label-sm text-label-sm">id="CAN_9821"</span>
+<span class="text-outline-variant text-label-sm font-label-sm">[3 child elements]</span>
+</div>
+<!-- Children of candidate -->
+<div class="ml-space-md flex flex-col gap-1">
+<!-- personalInfo -->
+<div class="group flex items-center justify-between py-1 px-space-xs bg-surface-container hover:bg-surface-container-high rounded cursor-pointer transition-all">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-outline">chevron_right</span>
+<span class="text-on-surface font-bold">&lt;personalInfo&gt;</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Alex Mercer</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline group-hover:text-primary font-bold">4 text nodes</span>
+</div>
+<!-- experience -->
+<div class="group flex flex-col gap-1 bg-surface-container p-1 rounded">
+<div class="flex items-center justify-between py-0.5 px-space-xs hover:bg-surface-container-high cursor-pointer rounded">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-primary">arrow_drop_down</span>
+<span class="text-on-surface font-bold">&lt;experience&gt;</span>
+<span class="bg-surface-container-highest px-1 font-label-sm text-label-sm font-bold">2 positions</span>
+</div>
+<span class="text-secondary font-bold text-label-sm font-label-sm">VALID</span>
+</div>
+<!-- Nested Position Items -->
+<div class="ml-space-md flex flex-col gap-1">
+<div class="flex items-center gap-space-xs py-0.5 px-space-xs text-body-sm font-label-sm bg-surface-container-lowest rounded shadow-sm">
+<span class="material-symbols-outlined text-xs text-primary">subdirectory_arrow_right</span>
+<span class="font-bold text-on-surface">position</span>
+<span class="text-tertiary">@company="FinTech Core"</span>
+<span class="text-outline">@duration="2021-2024"</span>
+</div>
+<div class="flex items-center gap-space-xs py-0.5 px-space-xs text-body-sm font-label-sm bg-surface-container-lowest rounded shadow-sm">
+<span class="material-symbols-outlined text-xs text-primary">subdirectory_arrow_right</span>
+<span class="font-bold text-on-surface">position</span>
+<span class="text-tertiary">@company="Krypton"</span>
+<span class="text-outline">@duration="2018-2021"</span>
+</div>
+</div>
+</div>
+<!-- skills -->
+<div class="group flex items-center justify-between py-1 px-space-xs bg-surface-container hover:bg-surface-container-high rounded cursor-pointer transition-all">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-outline">chevron_right</span>
+<span class="text-on-surface font-bold">&lt;skills&gt;</span>
+<span class="text-outline font-label-sm text-label-sm">3 category nodes</span>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed font-bold px-1 rounded">MATCHED</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Node Attributes Inspector Dock -->
+<div class="bg-surface-container-lowest p-space-md shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold text-outline font-mono">SELECTED DOM NODE INSPECTOR</span>
+<span class="font-label-sm text-label-sm bg-primary text-on-primary px-1.5 py-0.5 font-bold uppercase">Element</span>
+</div>
+<div class="p-space-sm bg-surface-container-high rounded flex flex-col gap-space-xs font-mono text-label-sm text-label-sm">
+<div class="flex justify-between">
+<span class="text-outline">Tag Name:</span>
+<span class="font-bold text-primary">&lt;candidate&gt;</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Namespace URI:</span>
+<span class="text-on-surface truncate">urn:oasis:names:tc:resumeml:3.4</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Attributes Count:</span>
+<span class="font-bold text-on-surface">2 (id, securityClearance)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">XSD Data Type:</span>
+<span class="text-secondary font-bold">CandidateMasterRecordType (Complex)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Section: SAX Parser Event Log & DTD Audit (Split Deck) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-stretch">
+<!-- SAX Parser Event Log (7 Cols) -->
+<div class="xl:col-span-7 bg-inverse-surface text-inverse-on-surface p-space-md shadow-xl flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-fixed text-xl">speed</span>
+<span class="font-headline-sm text-headline-sm text-inverse-on-surface uppercase tracking-tight">SAX Stream Parser Trace Log</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-secondary-fixed font-bold font-mono">EXECUTION: 4.2ms</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-outline-variant">
+            Non-blocking SAX event handler stream (`DefaultHandler2`). Zero DOM instantiation overhead for lightning-fast resume intake.
+          </p>
+<!-- Streaming Event Rows -->
+<div class="flex flex-col gap-1 font-mono text-label-sm text-label-sm mt-space-xs max-h-56 overflow-y-auto">
+<div class="flex items-center justify-between p-1 bg-on-surface/10 rounded">
+<span class="text-secondary-fixed font-bold">[T+0.0ms]</span>
+<span class="text-on-primary font-bold">startDocument()</span>
+<span class="text-outline-variant">Document encoding set to UTF-8</span>
+</div>
+<div class="flex items-center justify-between p-1 bg-on-surface/5 rounded">
+<span class="text-secondary-fixed font-bold">[T+0.4ms]</span>
+<span class="text-inverse-primary">startElement(uri="", localName="resume", qName="resume", atts=[version="3.4", humanCrafted="true"])</span>
+<span class="text-secondary-fixed font-bold">OK</span>
+</div>
+<div class="flex items-center justify-between p-1 bg-on-surface/5 rounded">
+<span class="text-secondary-fixed font-bold">[T+1.1ms]</span>
+<span class="text-inverse-primary">startElement(qName="candidate", atts=[id="CAN_9821"])</span>
+<span class="text-secondary-fixed font-bold">MATCH</span>
+</div>
+<div class="flex items-center justify-between p-1 bg-on-surface/10 rounded">
+<span class="text-secondary-fixed font-bold">[T+1.8ms]</span>
+<span class="text-secondary">characters("Alex \"Blitz\" Mercer", len=19)</span>
+<span class="text-outline-variant">Normalized string</span>
+</div>
+<div class="flex items-center justify-between p-1 bg-on-surface/5 rounded">
+<span class="text-secondary-fixed font-bold">[T+2.6ms]</span>
+<span class="text-inverse-primary">startElement(qName="achievement", atts=[impact="+$1.8M ARR"])</span>
+<span class="text-secondary-fixed font-bold">OK</span>
+</div>
+<div class="flex items-center justify-between p-1 bg-on-surface/10 rounded">
+<span class="text-secondary-fixed font-bold">[T+3.4ms]</span>
+<span class="text-on-primary">endElement(qName="experience")</span>
+<span class="text-outline-variant">Stack popped: depth 3 -&gt; 2</span>
+</div>
+<div class="flex items-center justify-between p-1 bg-on-surface/10 rounded">
+<span class="text-secondary-fixed font-bold">[T+4.2ms]</span>
+<span class="text-on-primary font-bold">endDocument()</span>
+<span class="text-secondary-fixed font-bold">STATUS: ZERO ERRORS (0 warnings)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/30 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline-variant uppercase font-mono">Handler: com.resusass.parser.ResumeSaxHandler</span>
+<button class="bg-surface-container-lowest text-on-surface font-label-sm text-label-sm uppercase px-space-sm py-1 font-bold hover:bg-surface-container-high transition-all">Clear Stream</button>
+</div>
+</div>
+<!-- DTD & XSD Compliance Audit Card (5 Cols) -->
+<div class="xl:col-span-5 bg-surface-container-lowest p-space-md shadow-xl flex flex-col justify-between">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-2xl">verified_user</span>
+<span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface">DTD &amp; XSD Compliance Audit</span>
+</div>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-space-sm py-1 uppercase font-bold tracking-wider">
+              PASSED
+            </span>
+</div>
+<!-- Highlight Metric Box -->
+<div class="bg-secondary-container p-space-md flex flex-col gap-space-xs rounded">
+<div class="flex items-center gap-space-xs text-on-secondary-container">
+<span class="material-symbols-outlined text-xl">gavel</span>
+<span class="font-label-md text-label-md uppercase font-bold">W3C Strict Schema Standard</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-secondary-container font-bold leading-tight">
+              100% Valid against W3C XML Schema Definition. Zero hallucinated tags.
+            </p>
+<span class="font-label-sm text-label-sm text-on-secondary-container/80 font-mono mt-1">
+              Grammar Cache: Hit (org.apache.xerces.impl.xs.models.CMBuilder)
+            </span>
+</div>
+<!-- Strict Checkpoints Checklist -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between p-space-xs bg-surface-container rounded font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span class="font-bold text-on-surface">DTD Entity Reference Resolution</span>
+</div>
+<span class="text-outline font-mono">100% Validated</span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container rounded font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span class="font-bold text-on-surface">Attribute Cardinality &amp; RegEx Patterns</span>
+</div>
+<span class="text-outline font-mono">CAN_([0-9]{4}) Pass</span>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container rounded font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base">check</span>
+<span class="font-bold text-on-surface">No AI Hallucinated Markup Elements</span>
+</div>
+<span class="text-secondary font-bold font-mono">Verified Zero</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm mt-space-md pt-space-sm border-t border-surface-container-high">
+<button class="flex-1 bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase font-bold py-2 hover:bg-surface-container-highest transition-all text-center" id="downloadXsdBtn">
+            Download .XSD Spec
+          </button>
+<button class="flex-1 bg-primary text-on-primary font-label-sm text-label-sm uppercase font-bold py-2 hover:bg-primary-container transition-all text-center" id="exportReportBtn">
+            Export Audit Report
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interactions and action feedbacks
+  document.getElementById('validateBtn')?.addEventListener('click', function() {
+    const origText = this.innerHTML;
+    this.innerHTML = '<span class="material-symbols-outlined text-base animate-spin">refresh</span> Validating...';
+    setTimeout(() => {
+      this.innerHTML = '<span class="material-symbols-outlined text-base">done_all</span> Validated: 0 Errors';
+      setTimeout(() => { this.innerHTML = origText; }, 2000);
+    }, 450);
+  });
+
+  document.getElementById('saxRunBtn')?.addEventListener('click', function() {
+    const orig = this.innerHTML;
+    this.innerHTML = '<span class="material-symbols-outlined text-base animate-pulse">bolt</span> Parsing Stream...';
+    setTimeout(() => {
+      this.innerHTML = '<span class="material-symbols-outlined text-base">check</span> Parsed in 4.2ms';
+      setTimeout(() => { this.innerHTML = orig; }, 2000);
+    }, 400);
+  });
+
+  document.getElementById('formatBtn')?.addEventListener('click', function() {
+    const editor = document.getElementById('xmlEditorContent');
+    if (editor) {
+      editor.classList.add('opacity-50');
+      setTimeout(() => {
+        editor.classList.remove('opacity-50');
+      }, 200);
+    }
+  });
+
+  document.getElementById('sampleBtn')?.addEventListener('click', function() {
+    alert('ResumeML v3.4 Strict template regenerated from canonical master repository.');
+  });
+</script></main><footer class="w-full bg-surface-container-lowest border-t-2 border-primary-container"><div class="bg-primary-container text-on-primary py-1 px-gutter overflow-hidden flex items-center gap-space-lg"><span class="font-label-sm text-label-sm font-bold uppercase tracking-widest shrink-0">HOTKEYS //</span><span class="font-label-sm text-label-sm uppercase font-mono tracking-wider shrink-0">[CTRL+S] COMPILE XML // [CTRL+J] EXEC SERVLET // [CTRL+P] RENDER JSP // [ESC] KILL JVM THREAD</span></div><div class="w-full px-gutter py-space-md flex flex-col md:flex-row items-center justify-between gap-space-md border-t border-on-surface/20"><div class="flex flex-col gap-1"><span class="font-label-md text-label-md font-bold uppercase text-on-surface">RESUSASS — HIGH-VOLTAGE ARCHITECTURE</span><span class="font-body-sm text-body-sm text-on-surface-variant">Powered by Java Virtual Machine, Apache Tomcat Servlets, JSP 3.1 &amp; XML SAX/DOM Parsers</span></div><div class="flex items-center gap-space-sm"><span class="font-label-sm text-label-sm bg-surface-container-high px-space-sm py-1 border border-on-surface uppercase">SERVLET SPEC 6.0</span><span class="font-label-sm text-label-sm bg-surface-container-high px-space-sm py-1 border border-on-surface uppercase">XML SCHEMA 1.3</span></div></div></footer></div></body></html>
