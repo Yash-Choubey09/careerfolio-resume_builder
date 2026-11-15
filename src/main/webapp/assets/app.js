@@ -6,7 +6,7 @@
   const toast = document.getElementById('toast');
   const preview = document.getElementById('resume-preview');
   const context = document.querySelector('link[href*="/assets/styles.css"]').getAttribute('href').replace(/\/assets\/styles\.css(?:\?.*)?$/, '');
-  const templateNames = { modern: 'The Modernist', executive: 'The Executive', minimal: 'The Essential', creative: 'The Creative', graduate: 'The Graduate', classic: 'The Classic' };
+  const templateNames = { modern: 'The Modernist', executive: 'The Executive', minimal: 'The Essential', creative: 'The Creative', graduate: 'The Graduate', classic: 'The Classic', tech: 'The Technical', academic: 'The Academic' };
   const requestedTemplate = new URLSearchParams(window.location.search).get('template');
   const routeTemplate = Object.prototype.hasOwnProperty.call(templateNames, requestedTemplate) ? requestedTemplate : null;
   const accents = { cobalt: '#243cff', plum: '#8150a0', forest: '#2f795e', terracotta: '#a34f3b' };
@@ -188,6 +188,43 @@
     }
     window.location.href = `${context}/api/resume?format=word`;
   };
+  const authButton = document.getElementById('auth-button');
+  const logoutButton = document.getElementById('logout-button');
+  const auth = async action => {
+    const email = window.prompt(`${action === 'register' ? 'Create account' : 'Sign in'} email`);
+    if (!email) return false;
+    const password = window.prompt('Password (minimum 8 characters)');
+    if (!password) return false;
+    const data = new URLSearchParams({ action, email, password });
+    const response = await fetch(`${context}/api/auth`, { method: 'POST', body: data });
+    const result = await response.json();
+    if (!response.ok) throw new Error(result.error || 'Authentication failed');
+    authButton.hidden = true; logoutButton.hidden = false; status.textContent = `Signed in as ${result.email}`;
+    return true;
+  };
+  const checkAuth = async () => {
+    const response = await fetch(`${context}/api/auth`, { cache: 'no-store' });
+    const result = await response.json();
+    authButton.textContent = result.authenticated ? 'Signed in' : 'Sign in / Register';
+    authButton.hidden = result.authenticated; logoutButton.hidden = !result.authenticated;
+    return result.authenticated;
+  };
+  const showError = error => { toast.textContent = error.message; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 3200); };
+  const generateLatex = async () => {
+    if (!await checkAuth()) { showError(new Error('Sign in before generating editable LaTeX.')); return; }
+    const response = await fetch(`${context}/api/resume?format=latex`, { cache: 'no-store' });
+    if (!response.ok) { showError(new Error('Save your resume before generating LaTeX.')); return; }
+    document.getElementById('latex-source').value = await response.text();
+  };
+  const runAts = async () => {
+    if (!await checkAuth()) { showError(new Error('Sign in before running the ATS reader.')); return; }
+    const draft = collect();
+    const text = Object.values(draft).flat().join('\n');
+    const response = await fetch(`${context}/api/ats`, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' }, body: new URLSearchParams({ text }) });
+    const result = await response.json();
+    if (!response.ok) throw new Error(result.error || 'ATS analysis failed');
+    document.getElementById('ats-result').innerHTML = `<strong>${esc(result.score)}/100</strong> · ${esc(result.message)}<br><small>Sections detected: ${esc(result.checks.sections)} · Contact: ${esc(result.checks.contact)} · Length: ${esc(result.checks.length)}</small>`;
+  };
 
   const initialTemplate = [...preview.classList].find(name => name.startsWith('paper--'))?.replace('paper--', '') || 'modern';
   renderTemplate(initialTemplate);
@@ -201,7 +238,12 @@
   document.getElementById('add-education').addEventListener('click', () => { addEntry(document.getElementById('education-list'), 'education').querySelector('input').focus(); });
   ['download-pdf', 'download-bottom', 'preview-print'].forEach(id => document.getElementById(id).addEventListener('click', printResume));
   document.getElementById('download-word').addEventListener('click', exportWord);
+  authButton.addEventListener('click', async () => { try { await auth(window.confirm('Choose OK to create a new account, or Cancel to sign in.') ? 'register' : 'login'); } catch (error) { showError(error); } });
+  logoutButton.addEventListener('click', async () => { await fetch(`${context}/api/auth`, { method: 'POST', body: new URLSearchParams({ action: 'logout' }) }); logoutButton.hidden = true; authButton.hidden = false; status.textContent = 'Saved on this device'; });
+  document.getElementById('generate-latex').addEventListener('click', generateLatex);
+  document.getElementById('download-latex').addEventListener('click', async () => { await generateLatex(); const source = document.getElementById('latex-source').value; if (source) { const blob = new Blob([source], { type: 'application/x-tex' }); const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = 'Careerfolio-Resume.tex'; link.click(); URL.revokeObjectURL(link.href); } });
+  document.getElementById('run-ats').addEventListener('click', () => runAts().catch(showError));
 
   status.textContent = 'Loading your workspace…';
-  restore().finally(() => { render(); status.textContent = 'All changes saved'; });
+  restore().finally(() => { render(); checkAuth().catch(() => false); status.textContent = 'All changes saved'; });
 })();

@@ -1,14 +1,17 @@
 # Careerfolio Resume Builder
 
-Careerfolio is a polished resume studio built with Java Servlets, JSP, XML, HTML, CSS, and vanilla JavaScript. It lets people choose a layout, edit their story with a live preview, save drafts locally, and print or save a resume as PDF.
+Careerfolio is a Java full-stack resume studio built with Java Servlets, JSP, XML, HTML, CSS, and vanilla JavaScript. It lets people choose a layout, edit their story with a live preview, save drafts locally or to an authenticated session, and print or save a resume as PDF.
 
 ## Features
 
-- Six resume layouts for modern, executive, minimal, creative, graduate, and classic use cases
+- Eight resume layouts for modern, executive, minimal, creative, graduate, classic, technical, and academic use cases
 - Live preview with editable profile, summary, experience, skills, and education sections
 - Browser-local autosave with an optional Java HTTP-session save
 - Print-ready PDF export through the browser print dialog
 - Word-compatible `.doc` export from the Java servlet
+- PBKDF2-hashed account registration, login, logout, and authenticated server storage
+- Editable LaTeX source generation and download
+- Local ATS reader with transparent scoring checks
 - Responsive landing page and resume editor
 
 ## Stack
@@ -42,6 +45,10 @@ http://localhost:8080/careerfolio/
 ```
 
 The application exposes `POST /careerfolio/api/resume` to save a draft and `GET /careerfolio/api/resume` to read it as XML. Word export is available with `?format=word`.
+
+Create an account or sign in from the resume studio before using server-side saving, Word/LaTeX export, or ATS analysis. Authentication is intentionally in-memory for this dependency-free demo; use a database-backed user repository before production deployment. The ATS reader is a local, deterministic analysis and does not upload resume content to a third party.
+
+The LaTeX editor is available in the studio under **LaTeX source**. Generate the source, edit it directly, then download the `.tex` file. The ATS reader is available under **ATS reader** and checks contact details, standard sections, resume length, and measurable outcomes.
 
 ## Vercel preview
 

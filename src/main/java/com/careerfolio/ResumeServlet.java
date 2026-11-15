@@ -17,6 +17,10 @@ public class ResumeServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        if (!AuthServlet.isAuthenticated(request)) {
+            response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Sign in to use server-side resume storage.");
+            return;
+        }
         Object resume = request.getSession().getAttribute(RESUME_KEY);
         if ("word".equalsIgnoreCase(request.getParameter("format"))) {
             response.setCharacterEncoding("UTF-8");
@@ -25,6 +29,12 @@ public class ResumeServlet extends HttpServlet {
             response.getWriter().write(toWordHtml(asFields(resume)));
             return;
         }
+            if ("latex".equalsIgnoreCase(request.getParameter("format"))) {
+                response.setContentType("application/x-tex; charset=UTF-8");
+                response.setHeader("Content-Disposition", "attachment; filename=Careerfolio-Resume.tex");
+                response.getWriter().write(toLatex(asFields(resume)));
+                return;
+            }
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/xml");
         response.setHeader("Cache-Control", "no-store");
@@ -33,6 +43,10 @@ public class ResumeServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        if (!AuthServlet.isAuthenticated(request)) {
+            response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Sign in to save resumes.");
+            return;
+        }
         request.setCharacterEncoding("UTF-8");
         Map<String, List<String>> resume = new LinkedHashMap<>();
         request.getParameterMap().forEach((key, values) -> {
@@ -86,7 +100,7 @@ public class ResumeServlet extends HttpServlet {
         else if ("forest".equals(accentName)) accent = "#2f795e";
         else if ("terracotta".equals(accentName)) accent = "#a34f3b";
         String template = first(fields, "template", 0);
-        if (!template.matches("modern|executive|minimal|creative|graduate|classic")) template = "modern";
+        if (!template.matches("modern|executive|minimal|creative|graduate|classic|tech|academic")) template = "modern";
 
         StringBuilder html = new StringBuilder("<!DOCTYPE html><html><head><meta charset=\"UTF-8\"><title>Resume</title><style>")
                 .append("body{font-family:'Times New Roman',Times,serif;color:#20212a;font-size:10.5pt;line-height:1.45}body *{font-family:'Times New Roman',Times,serif}h1{font-size:25pt;margin:0;color:#171820}h2{font-size:10pt;text-transform:uppercase;letter-spacing:1.5pt;color:")
@@ -124,6 +138,34 @@ public class ResumeServlet extends HttpServlet {
         }
         appendSection(html, "Skills", first(fields, "skills", 0));
         return html.append("</body></html>").toString();
+    }
+
+    private String toLatex(Map<String, List<String>> fields) {
+        StringBuilder tex = new StringBuilder("\\documentclass[10pt]{article}\n\\usepackage[margin=0.7in]{geometry}\n\\usepackage{hyperref}\n\\begin{document}\n");
+        tex.append("\\begin{center}\\LARGE\\textbf{").append(latex(first(fields, "fullName", 0))).append("}\\\\\n");
+        tex.append("\\normalsize ").append(latex(first(fields, "jobTitle", 0))).append("\\end{center}\n");
+        tex.append("\\textbf{").append(latex(String.join(" | ", Arrays.asList(first(fields, "email", 0), first(fields, "phone", 0), first(fields, "location", 0))))).append("}\n");
+        appendLatexSection(tex, "Profile", first(fields, "summary", 0));
+        tex.append("\\section*{Experience}\n");
+        int experienceCount = size(fields, "experienceTitle", "experienceCompany", "experienceDates", "experienceDescription");
+        for (int i = 0; i < experienceCount; i++) {
+            tex.append("\\textbf{").append(latex(first(fields, "experienceTitle", i))).append("} -- ")
+                    .append(latex(first(fields, "experienceCompany", i))).append(" (").append(latex(first(fields, "experienceDates", i))).append(")\\\\\n")
+                    .append(latex(first(fields, "experienceDescription", i))).append("\\par\\medskip\n");
+        }
+        appendLatexSection(tex, "Education", first(fields, "educationDegree", 0) + " -- " + first(fields, "educationSchool", 0));
+        appendLatexSection(tex, "Skills", first(fields, "skills", 0));
+        return tex.append("\\end{document}\n").toString();
+    }
+
+    private void appendLatexSection(StringBuilder tex, String title, String value) {
+        if (value != null && !value.trim().isEmpty()) tex.append("\\section*{").append(title).append("}\n").append(latex(value)).append("\n");
+    }
+
+    private String latex(String value) {
+        return (value == null ? "" : value).replace("\\", "\\textbackslash{}").replace("&", "\\&")
+                .replace("%", "\\%").replace("$", "\\$").replace("#", "\\#").replace("_", "\\_")
+                .replace("{", "\\{").replace("}", "\\}").replace("~", "\\textasciitilde{}").replace("^", "\\textasciicircum{}");
     }
 
     private int size(Map<String, List<String>> fields, String... keys) {

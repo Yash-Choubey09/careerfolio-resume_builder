@@ -4,5 +4,9 @@
   <welcome-file-list><welcome-file>index.jsp</welcome-file></welcome-file-list>
   <servlet><servlet-name>resume</servlet-name><servlet-class>com.careerfolio.ResumeServlet</servlet-class></servlet>
   <servlet-mapping><servlet-name>resume</servlet-name><url-pattern>/api/resume</url-pattern></servlet-mapping>
+  <servlet><servlet-name>auth</servlet-name><servlet-class>com.careerfolio.AuthServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>auth</servlet-name><url-pattern>/api/auth</url-pattern></servlet-mapping>
+  <servlet><servlet-name>ats</servlet-name><servlet-class>com.careerfolio.AtsServlet</servlet-class></servlet>
+  <servlet-mapping><servlet-name>ats</servlet-name><url-pattern>/api/ats</url-pattern></servlet-mapping>
   <session-config><session-timeout>120</session-timeout><cookie-config><http-only>true</http-only></cookie-config></session-config>
 </web-app>

@@ -21,7 +21,7 @@
     const choose = event.target.closest('[data-template]');
     if (!choose) return;
     const template = choose.getAttribute('data-template');
-    if (!/^(modern|executive|minimal|creative|graduate|classic)$/.test(template)) return;
+    if (!/^(modern|executive|minimal|creative|graduate|classic|tech|academic)$/.test(template)) return;
     window.location.href = `${context}/builder.jsp?template=${encodeURIComponent(template)}`;
   });
 })();
